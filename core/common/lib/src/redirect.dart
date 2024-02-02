@@ -1,0 +1,4 @@
+enum Redirect {
+  openHomeScreen,
+  openLoginScreen
+}

@@ -1,0 +1,12 @@
+{
+  "retry":"Thử lại",
+  "ok": "Đồng Ý",
+  "my_list": "Danh sách của tôi",
+  "popular": "Phổ biến trên Netflix",
+  "year": "Năm",
+  "country": "Quốc gia",
+  "cannotSupport": "Không hỗ trợ",
+  "length": "Độ dài",
+  "screenshot": "Ảnh chụp từ phim",
+  "movieIdInvalid": "Id của phim không được để trống"
+}

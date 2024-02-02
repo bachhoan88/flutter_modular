@@ -1,0 +1,43 @@
+name: core_data
+description: "Data module"
+
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.8.1
+  flutter_gen_runner: ^5.4.0
+  dio: ^5.4.0
+  retrofit: ^4.0.3
+  core_model:
+    path: ../model
+  core_common:
+    path: ../common
+  core_network:
+    path: ../network
+  package_info_plus: ^5.0.1
+  retrofit_generator: ^8.0.6
+  equatable: ^2.0.5
+  riverpod: ^2.4.9
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+  build_runner: ^2.4.8
+  freezed: ^2.4.6
+  json_serializable: ^6.7.1
+
+flutter:
+  module:
+    androidX: true
+    androidPackage: com.flutterexample.core.data
+    iosBundleIdentifier: com.flutterexample.core.data

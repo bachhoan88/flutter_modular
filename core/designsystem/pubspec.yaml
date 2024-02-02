@@ -1,0 +1,51 @@
+name: core_designsystem
+description: "Design system core module"
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  flutter_svg: ^2.0.9
+  flutter_gen_runner: ^5.4.0
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.8.1
+  equatable: ^2.0.5
+  google_fonts: ^6.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  build_runner: ^2.4.8
+  freezed: ^2.4.6
+  json_serializable: ^6.7.1
+
+# Config generate when build
+flutter_gen:
+  output: lib/gen/
+  line_length: 160
+  null_safety: true
+  integrations:
+    flutter_svg: true
+    flare_flutter: true
+  assets:
+    enabled: true
+  fonts:
+    enabled: true
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/ic_netflix.png
+    - assets/images/ic_menu.png
+
+  module:
+    androidX: true
+    androidPackage: com.flutterexample.modular.designsystem
+    iosBundleIdentifier: com.flutterexample.modular.designsystem

@@ -1,0 +1,12 @@
+{
+  "retry":"Retry",
+  "ok": "OK",
+  "my_list": "My List",
+  "popular": "Popular on Netflix",
+  "year": "Year",
+  "country": "Country",
+  "cannotSupport": "Cannot support",
+  "length": "Length",
+  "screenshot": "Screenshots",
+  "movieIdInvalid": "Movie id must be not null"
+}
