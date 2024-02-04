@@ -21,6 +21,8 @@ dependencies:
     path: feature/detail
   core_designsystem:
     path: core/designsystem
+  core_network:
+    path: core/network
   easy_localization: ^3.0.3
 
 dev_dependencies:

@@ -17,7 +17,6 @@ class DetailPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final movie = GoRouterState.of(context).extra as Movie;
-    ref.watch(detailViewModelProvider(movie.id ?? 0).notifier).getMovieInfo(movie.id ?? 0);
 
     return PopScope(
       child: Scaffold(

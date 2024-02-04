@@ -215,7 +215,7 @@ packages:
     source: hosted
     version: "1.2.0"
   dio:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: dio
       sha256: "797e1e341c3dd2f69f2dad42564a6feff3bfb87187d05abb93b9609e6f1645c3"
@@ -470,7 +470,7 @@ packages:
     source: hosted
     version: "2.1.0"
   package_info_plus:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: package_info_plus
       sha256: "88bc797f44a94814f2213db1c9bd5badebafdfb8290ca9f78d4b9ee2a3db4d79"
@@ -542,7 +542,7 @@ packages:
     source: hosted
     version: "1.2.3"
   retrofit:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: retrofit
       sha256: "04ed77c82cadb655bb9357e8d0cb9da72ff704749a2d0cfe6540dd1f1f7ca4b9"
@@ -550,7 +550,7 @@ packages:
     source: hosted
     version: "4.0.3"
   retrofit_generator:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: retrofit_generator
       sha256: "40f166d6e07fc3c8f77700093767fd0c1b4742d27fe049ecb15cea1245284bd8"

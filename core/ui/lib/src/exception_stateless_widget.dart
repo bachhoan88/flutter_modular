@@ -65,8 +65,10 @@ class ExceptionStatelessWidget<V extends BaseUiState> extends StatelessWidget {
               return const SizedBox();
             }(),
           SnackBarException(:final String? message, :final String? messageId) => () {
-              final snackBar = SnackBar(content: Text(messageId?.tr() ?? message ?? ''));
-              ScaffoldMessenger.of(context).showSnackBar(snackBar);
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+                final snackBar = SnackBar(content: Text(messageId?.tr() ?? message ?? ''));
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+              });
               return const SizedBox();
             }(),
           OnPageException(:final String? message, :final String? messageId) => ErrorPage(
@@ -76,11 +78,15 @@ class ExceptionStatelessWidget<V extends BaseUiState> extends StatelessWidget {
               },
             ),
           AlertException(:final String? titleId, :final String? message, :final String? messageId) => () {
-              _showAlert(context, titleId, messageId, message);
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+                _showAlert(context, titleId, messageId, message);
+              });
               return const SizedBox();
             }(),
           DialogException(:final Dialogs dialogs) => () {
-              _showDialog(context, dialogs);
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+                _showDialog(context, dialogs);
+              });
               return const SizedBox();
             }(),
           InlineException() => const SizedBox(),

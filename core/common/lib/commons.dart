@@ -13,13 +13,6 @@ export 'src/exception_state.dart'
         AlertException,
         RedirectException,
         DialogException,
-        ExceptionState,
-        Inline,
-        RedirectPage,
-        ShowAlert,
-        ShowDialog,
-        ShowSnackBar,
-        ShowToast,
-        OnPage;
+        ExceptionState;
 export 'src/redirect.dart';
 export 'src/tag.dart';

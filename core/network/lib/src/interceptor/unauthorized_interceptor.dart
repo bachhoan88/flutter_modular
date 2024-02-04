@@ -66,6 +66,8 @@ class UnauthorizedInterceptor extends QueuedInterceptor {
       } on DioException catch (e) {
         handler.next(e);
       }
+    } else {
+      return super.onError(err, handler);
     }
   }
 

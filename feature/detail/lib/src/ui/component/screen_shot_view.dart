@@ -1,4 +1,3 @@
-import 'package:core_designsystem/design_system.dart';
 import 'package:core_model/models.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:feature_detail/src/ui/component/screenshot_view_holder.dart';
@@ -31,11 +30,11 @@ class ScreenshotView extends StatelessWidget {
                 flex: 1,
                 child: Text(
                   'screenshot'.tr(),
-                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: darkGray),
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
               ),
               IconButton(
-                icon: const Icon(Icons.arrow_forward, color: darkGray),
+                icon: const Icon(Icons.arrow_forward),
                 onPressed: actionLoadAll,
               )
             ],

@@ -1,0 +1,27 @@
+name: Check CI & Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dart-lang/setup-dart@v1
+
+      # Run pub get all modules
+      - name: Install dependencies
+        run: make pub_get_all
+
+      # Check coding convention
+      - name: Analyze project source
+        run: make analyze_all
+
+      # Run unit test
+      - name: Run unit test
+        run: make test_all

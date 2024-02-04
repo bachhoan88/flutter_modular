@@ -10,3 +10,4 @@ export 'src/movie_info.dart';
 export 'src/data_error.dart';
 export 'src/movie_db_data_error.dart';
 export 'src/movie_db_data_error.dart' show MovieDbDataErrorExt;
+export 'src/app_error.dart';

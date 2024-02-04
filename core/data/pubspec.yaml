@@ -14,16 +14,12 @@ dependencies:
   freezed_annotation: ^2.4.1
   json_annotation: ^4.8.1
   flutter_gen_runner: ^5.4.0
-  dio: ^5.4.0
-  retrofit: ^4.0.3
   core_model:
     path: ../model
   core_common:
     path: ../common
   core_network:
     path: ../network
-  package_info_plus: ^5.0.1
-  retrofit_generator: ^8.0.6
   equatable: ^2.0.5
   riverpod: ^2.4.9
 

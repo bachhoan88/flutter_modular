@@ -5,7 +5,6 @@ class TopAppBar extends AppBar {
   TopAppBar({super.key, Function? actionDrawer, Function? actionSearch})
         : super(
           titleSpacing: 4.0,
-          backgroundColor: Colors.white,
           title: Assets.images.icNetflix.image(
             height: 56.0,
             fit: BoxFit.fitHeight,

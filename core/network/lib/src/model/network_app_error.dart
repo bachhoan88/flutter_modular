@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:core_model/models.dart';
 import 'package:dio/dio.dart';
-import 'package:equatable/equatable.dart';
 
 enum AppErrorType {
   network,
@@ -15,18 +14,13 @@ enum AppErrorType {
   unknown,
 }
 
-class AppError implements Equatable {
-  final String message;
-  final AppErrorType type;
-
-  final int? headerCode;
+class NetworkAppError extends AppError {
+  final AppErrorType errorType;
   final List<DataError>? errors;
 
-  AppError(this.type, this.message, {int? code, List<DataError>? err})
-      : headerCode = code,
-        errors = err;
+  NetworkAppError({super.code, super.message, required this.errorType, this.errors});
 
-  factory AppError.from(Exception error) {
+  factory NetworkAppError.from(Exception error) {
     var type = AppErrorType.unknown;
     var message = '';
     int? headerCode;
@@ -65,6 +59,10 @@ class AppError implements Equatable {
                 errors = [DataError(errorCode: -1, message: e.toString())];
               }
               break;
+            case HttpStatus.forbidden:
+              type = AppErrorType.server;
+              message = error.response?.statusMessage ?? '';
+              break;
             default:
               type = AppErrorType.unknown;
               break;
@@ -90,12 +88,6 @@ class AppError implements Equatable {
       message = 'AppError: $error';
     }
 
-    return AppError(type, message, code: headerCode, err: errors);
+    return NetworkAppError(errorType: type, message: message, code: headerCode, errors: errors);
   }
-
-  @override
-  List<Object?> get props => [type, message, headerCode, errors];
-
-  @override
-  bool? get stringify => true;
 }

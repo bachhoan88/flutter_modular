@@ -1,22 +1,53 @@
-## Environment
-### Flutter
+# Environment
 
+## Framework
 - Flutter: 3.16.5
 - Dart: 3.2.3
 
-# flutter_modular
+## iOS
+- iOS 12+
 
-A new Flutter project.
+## Android
+- Min Android: 5.0
+- Target SDK 34 (Android 14)
 
-## Getting Started
+# Architecture
 
-This project is a starting point for a Flutter application.
+The **Flutter Modular app** follows the
+[official architecture guidance](https://developer.android.com/topic/architecture)
+and is described in detail in the
+[architecture learning journey](docs%2FArchitectureLearningJourney.md).
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Modularization
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+The **Flutter Modular app** has been fully modularized and you can find the detailed guidance and
+description of the modularization strategy used in
+[modularization learning journey](docs%2FModularizationLearningJourney.md).
+
+
+# Build & Run
+
+The app contains the usual `dev` `stag` and `prod` build flavor.
+
+Get dependencies
+
+```
+make pub_get_all
+```
+
+Run dev flavor application
+
+```
+flutter run -d DEVICE_ID --flavor dev --dart-define=FLAVOR=dev  
+```
+
+# UI
+
+The app was designed using [Material 3 guidelines](https://m3.material.io). Learn more about the design process
+
+The app has only themes:
+- Dynamic color - uses colors based on the user's [current color theme](https://material.io/blog/announcing-material-you)
+
+Each theme also supports dark mode.

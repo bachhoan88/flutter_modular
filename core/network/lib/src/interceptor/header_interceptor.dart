@@ -1,4 +1,3 @@
-
 import 'dart:io';
 
 import 'package:dio/dio.dart';
@@ -10,8 +9,7 @@ class HeaderInterceptor extends InterceptorsWrapper {
   final String bearer = 'Bearer';
 
   @override
-  void onRequest(
-      RequestOptions options, RequestInterceptorHandler handler) async {
+  void onRequest(RequestOptions options, RequestInterceptorHandler handler) async {
     final userAgentValue = await userAgentClientHintsHeader();
 
     /// If need to add token on header, please add get and add here

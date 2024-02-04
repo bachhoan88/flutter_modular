@@ -1,4 +1,3 @@
-import 'package:core_designsystem/design_system.dart';
 import 'package:core_model/models.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:feature_home/src/ui/component/movie_view_holder.dart';
@@ -31,7 +30,7 @@ class MyListView extends StatelessWidget {
                 flex: 1,
                 child: Text(
                   'my_list'.tr(),
-                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: darkGray),
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
               ),
               IconButton(

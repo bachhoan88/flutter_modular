@@ -23,9 +23,14 @@ analyze_all:
 	@find . -name pubspec.yaml -exec echo "### Analyze sources for {}" \; \
     	-execdir flutter analyze \;
 
+# Runs `flutter test` in all the project packages.
+test_all:
+	@find . -name test -exec echo "### Run unit test for {}" \; \
+        	-execdir flutter test --coverage lib \;
+
 # Runs `flutter clean` in all the project packages.
 clean_all:
 	@find . -name pubspec.yaml -exec echo "### Cleaning {}" \; \
 	-execdir flutter clean \;
 
-.PHONY: pub_get pub_get_all generate_sources_all clean_all analyze_all
+.PHONY: pub_get pub_get_all generate_sources_all analyze_all test_all clean_all

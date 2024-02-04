@@ -5,5 +5,5 @@ import 'package:feature_detail/src/ui/detail_ui_state.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final detailViewModelProvider = StateNotifierProvider.autoDispose.family<DetailViewModel, UiState<DetailData>, int>(
-  (ref, _) => DetailViewModel(ref.read(movieRepositoryProvider)),
+  (ref, movieId) => DetailViewModel(movieId, ref.read(movieRepositoryProvider)),
 );

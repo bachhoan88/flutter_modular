@@ -80,9 +80,7 @@ class MovieInfoView extends StatelessWidget {
                   ),
                   Text(
                     movieInfo.runtime.toString(),
-                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                          fontSize: 18.0,
-                        ),
+                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(fontSize: 18.0),
                   )
                 ],
               ),
@@ -98,8 +96,8 @@ class MovieInfoView extends StatelessWidget {
   Widget _createMovieOverview(BuildContext context, String overview) {
     return Consumer(builder: (context, ref, child) {
       final movieId = movieInfo.id ?? 0;
-      final expanded = ref.watch(detailViewModelProvider(movieId).select((value) => value.data?.isDesExpanded)) ??
-          false;
+      final expanded =
+          ref.watch(detailViewModelProvider(movieId).select((value) => value.data?.isDesExpanded)) ?? false;
 
       return InkWell(
         onTap: ref.watch(detailViewModelProvider(movieId).notifier).toggleExpand,

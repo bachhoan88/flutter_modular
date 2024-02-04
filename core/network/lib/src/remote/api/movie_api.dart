@@ -1,5 +1,5 @@
-import 'package:core_data/src/remote/response/movie_response.dart';
 import 'package:core_model/models.dart';
+import 'package:core_network/src/remote/response/movie_response.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/http.dart';
 

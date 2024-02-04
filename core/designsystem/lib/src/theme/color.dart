@@ -5,4 +5,3 @@ const indigoColor = Colors.indigo;
 const orangeColor = Colors.orange;
 const tealColor = Colors.teal;
 const purpleColor = Colors.purple;
-const darkGray = Color(0xFF030303);
