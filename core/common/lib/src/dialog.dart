@@ -1,4 +1,4 @@
-import 'action.dart';
+import 'package:core_common/src/action.dart';
 
 class Dialogs {
   final String? titleId;

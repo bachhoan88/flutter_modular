@@ -1,11 +1,6 @@
+import 'package:core_model/models.dart';
 import 'package:core_model/src/base_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-
-import 'collection.dart';
-import 'company.dart';
-import 'country.dart';
-import 'genre.dart';
-import 'language.dart';
 
 part 'movie_info.freezed.dart';
 part 'movie_info.g.dart';
