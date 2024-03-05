@@ -24,6 +24,7 @@ class HomeViewModel extends BaseViewModel<UiState<HomeData>> {
         topMovies: topRate,
         upComingMovies: upComing,
       ));
+
     } on Exception catch (e) {
       handleExceptionState(e);
       state = UiStateException(e);
