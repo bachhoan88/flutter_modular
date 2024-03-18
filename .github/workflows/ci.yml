@@ -12,16 +12,28 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: dart-lang/setup-dart@v1
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.16.5'
+          channel: 'stable'
+
+      - name: 'Check flutter version'
+        run: flutter --version
 
       # Run pub get all modules
-      - name: Install dependencies
+      - name: 'Install dependencies'
         run: make pub_get_all
 
       # Check coding convention
-      - name: Analyze project source
+      - name: 'Analyze project source'
         run: make analyze_all
 
+      # Install lcov
+      - name: 'Install Lcov'
+        run: |
+          sudo apt-get update
+          sudo apt-get install lcov
+
       # Run unit test
-      - name: Run unit test
+      - name: 'Run unit test'
         run: make test_all
