@@ -68,7 +68,7 @@ how you can organize your project. In general, you should strive for low couplin
   have clearly defined responsibilities and stay within boundaries of certain domain knowledge.
 
 
-## Types of modules in Now in Android
+## Types of modules in Flutter Modular app
 ![Diagram showing types of modules and their dependencies in Flutter Modular app](images/flutter-modularization-graph.drawio.png "Diagram showing types of 
 modules and their dependencies in Flutter Modular app")
 
@@ -96,7 +96,7 @@ The Flutter Modular app contains the following types of modules:
 
 ## Modules
 
-Using the above modularization strategy, the Now in Android app has the following modules:
+Using the above modularization strategy, the Flutter Modular app has the following modules:
 
 <table>
   <tr>
