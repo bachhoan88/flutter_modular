@@ -26,7 +26,8 @@ analyze_all:
 # Runs `flutter test` in all the project packages.
 test_all:
 	@find . -name test -exec echo "### Run unit test for {}" \; \
-        	-execdir flutter test --coverage lib \;
+        	-execdir lcov --remove coverage/lcov.info '*_page.*' -o coverage/new_lcov.info \
+        	-execdir genhtml coverage/new_lcov.info --output=coverage \;
 
 # Runs `flutter clean` in all the project packages.
 clean_all:
