@@ -1,8 +1,8 @@
 # Environment
 
 ## Framework
-- Flutter: 3.16.5
-- Dart: 3.2.3
+- Flutter: 3.19.2
+- Dart: 3.3.0
 
 ## iOS
 - iOS 12+

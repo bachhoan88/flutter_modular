@@ -27,7 +27,14 @@ analyze_all:
 test_all:
 	@find . -name test -exec echo "### Run unit test for {}" \; \
 			-execdir flutter test --coverage \; \
-        	-execdir lcov --remove coverage/lcov.info '*_page.*' '*/component/*' '*_view.*' '*_view_holder.*' -o coverage/new_lcov.info \; \
+        	-execdir lcov --remove coverage/lcov.info \
+        	-o coverage/new_lcov.info \
+        	--ignore-errors unused \
+				'*_page.*' \
+				'*/component/*' \
+				'*_view.*' \
+				'*_view_holder.*' \
+				'*/di/*' \; \
         	-execdir genhtml coverage/new_lcov.info --output=coverage \;
 
 # Runs `flutter clean` in all the project packages.
