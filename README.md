@@ -17,7 +17,8 @@ The **Flutter Modular app** follows the
 [official architecture guidance](https://developer.android.com/topic/architecture)
 and is described in detail in the
 [architecture learning journey](docs%2FArchitectureLearningJourney.md).
-
+handle exceptions in detail in the
+[exception flow learning journey](docs%2FExceptionFlowLearningJourney.md).
 
 # Modularization
 
