@@ -17,30 +17,46 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$UiState<T> {
   bool get isLoading => throw _privateConstructorUsedError;
-  Exception? get exception => throw _privateConstructorUsedError;
+  SingleObserver<Exception>? get exception =>
+      throw _privateConstructorUsedError;
   T? get data => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(bool isLoading, Exception? exception, T? data)
+    required TResult Function(
+            bool isLoading, SingleObserver<Exception>? exception, T? data)
         loading,
-    required TResult Function(Exception exception, bool isLoading, T? data)
+    required TResult Function(
+            SingleObserver<Exception> exception, bool isLoading, T? data)
         exception,
-    required TResult Function(T data, bool isLoading, Exception? exception)
+    required TResult Function(
+            T data, bool isLoading, SingleObserver<Exception>? exception)
         success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool isLoading, Exception? exception, T? data)? loading,
-    TResult? Function(Exception exception, bool isLoading, T? data)? exception,
-    TResult? Function(T data, bool isLoading, Exception? exception)? success,
+    TResult? Function(
+            bool isLoading, SingleObserver<Exception>? exception, T? data)?
+        loading,
+    TResult? Function(
+            SingleObserver<Exception> exception, bool isLoading, T? data)?
+        exception,
+    TResult? Function(
+            T data, bool isLoading, SingleObserver<Exception>? exception)?
+        success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool isLoading, Exception? exception, T? data)? loading,
-    TResult Function(Exception exception, bool isLoading, T? data)? exception,
-    TResult Function(T data, bool isLoading, Exception? exception)? success,
+    TResult Function(
+            bool isLoading, SingleObserver<Exception>? exception, T? data)?
+        loading,
+    TResult Function(
+            SingleObserver<Exception> exception, bool isLoading, T? data)?
+        exception,
+    TResult Function(
+            T data, bool isLoading, SingleObserver<Exception>? exception)?
+        success,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -77,7 +93,7 @@ abstract class $UiStateCopyWith<T, $Res> {
   factory $UiStateCopyWith(UiState<T> value, $Res Function(UiState<T>) then) =
       _$UiStateCopyWithImpl<T, $Res, UiState<T>>;
   @useResult
-  $Res call({bool isLoading, Exception exception});
+  $Res call({bool isLoading, SingleObserver<Exception> exception});
 }
 
 /// @nodoc
@@ -104,7 +120,7 @@ class _$UiStateCopyWithImpl<T, $Res, $Val extends UiState<T>>
       exception: null == exception
           ? _value.exception!
           : exception // ignore: cast_nullable_to_non_nullable
-              as Exception,
+              as SingleObserver<Exception>,
     ) as $Val);
   }
 }
@@ -117,7 +133,7 @@ abstract class _$$UiStateLoadingImplCopyWith<T, $Res>
       __$$UiStateLoadingImplCopyWithImpl<T, $Res>;
   @override
   @useResult
-  $Res call({bool isLoading, Exception? exception, T? data});
+  $Res call({bool isLoading, SingleObserver<Exception>? exception, T? data});
 }
 
 /// @nodoc
@@ -143,7 +159,7 @@ class __$$UiStateLoadingImplCopyWithImpl<T, $Res>
       exception: freezed == exception
           ? _value.exception
           : exception // ignore: cast_nullable_to_non_nullable
-              as Exception?,
+              as SingleObserver<Exception>?,
       data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
@@ -162,7 +178,7 @@ class _$UiStateLoadingImpl<T> implements UiStateLoading<T> {
   final bool isLoading;
   @override
   @JsonKey()
-  final Exception? exception;
+  final SingleObserver<Exception>? exception;
   @override
   @JsonKey()
   final T? data;
@@ -198,11 +214,14 @@ class _$UiStateLoadingImpl<T> implements UiStateLoading<T> {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(bool isLoading, Exception? exception, T? data)
+    required TResult Function(
+            bool isLoading, SingleObserver<Exception>? exception, T? data)
         loading,
-    required TResult Function(Exception exception, bool isLoading, T? data)
+    required TResult Function(
+            SingleObserver<Exception> exception, bool isLoading, T? data)
         exception,
-    required TResult Function(T data, bool isLoading, Exception? exception)
+    required TResult Function(
+            T data, bool isLoading, SingleObserver<Exception>? exception)
         success,
   }) {
     return loading(isLoading, this.exception, data);
@@ -211,9 +230,15 @@ class _$UiStateLoadingImpl<T> implements UiStateLoading<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool isLoading, Exception? exception, T? data)? loading,
-    TResult? Function(Exception exception, bool isLoading, T? data)? exception,
-    TResult? Function(T data, bool isLoading, Exception? exception)? success,
+    TResult? Function(
+            bool isLoading, SingleObserver<Exception>? exception, T? data)?
+        loading,
+    TResult? Function(
+            SingleObserver<Exception> exception, bool isLoading, T? data)?
+        exception,
+    TResult? Function(
+            T data, bool isLoading, SingleObserver<Exception>? exception)?
+        success,
   }) {
     return loading?.call(isLoading, this.exception, data);
   }
@@ -221,9 +246,15 @@ class _$UiStateLoadingImpl<T> implements UiStateLoading<T> {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool isLoading, Exception? exception, T? data)? loading,
-    TResult Function(Exception exception, bool isLoading, T? data)? exception,
-    TResult Function(T data, bool isLoading, Exception? exception)? success,
+    TResult Function(
+            bool isLoading, SingleObserver<Exception>? exception, T? data)?
+        loading,
+    TResult Function(
+            SingleObserver<Exception> exception, bool isLoading, T? data)?
+        exception,
+    TResult Function(
+            T data, bool isLoading, SingleObserver<Exception>? exception)?
+        success,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -269,12 +300,13 @@ class _$UiStateLoadingImpl<T> implements UiStateLoading<T> {
 
 abstract class UiStateLoading<T> implements UiState<T> {
   const factory UiStateLoading(final bool isLoading,
-      {final Exception? exception, final T? data}) = _$UiStateLoadingImpl<T>;
+      {final SingleObserver<Exception>? exception,
+      final T? data}) = _$UiStateLoadingImpl<T>;
 
   @override
   bool get isLoading;
   @override
-  Exception? get exception;
+  SingleObserver<Exception>? get exception;
   @override
   T? get data;
   @override
@@ -291,7 +323,7 @@ abstract class _$$UiStateExceptionImplCopyWith<T, $Res>
       __$$UiStateExceptionImplCopyWithImpl<T, $Res>;
   @override
   @useResult
-  $Res call({Exception exception, bool isLoading, T? data});
+  $Res call({SingleObserver<Exception> exception, bool isLoading, T? data});
 }
 
 /// @nodoc
@@ -313,7 +345,7 @@ class __$$UiStateExceptionImplCopyWithImpl<T, $Res>
       null == exception
           ? _value.exception
           : exception // ignore: cast_nullable_to_non_nullable
-              as Exception,
+              as SingleObserver<Exception>,
       isLoading: null == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -333,7 +365,7 @@ class _$UiStateExceptionImpl<T> implements UiStateException<T> {
       {this.isLoading = false, this.data = null});
 
   @override
-  final Exception exception;
+  final SingleObserver<Exception> exception;
   @override
   @JsonKey()
   final bool isLoading;
@@ -372,11 +404,14 @@ class _$UiStateExceptionImpl<T> implements UiStateException<T> {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(bool isLoading, Exception? exception, T? data)
+    required TResult Function(
+            bool isLoading, SingleObserver<Exception>? exception, T? data)
         loading,
-    required TResult Function(Exception exception, bool isLoading, T? data)
+    required TResult Function(
+            SingleObserver<Exception> exception, bool isLoading, T? data)
         exception,
-    required TResult Function(T data, bool isLoading, Exception? exception)
+    required TResult Function(
+            T data, bool isLoading, SingleObserver<Exception>? exception)
         success,
   }) {
     return exception(this.exception, isLoading, data);
@@ -385,9 +420,15 @@ class _$UiStateExceptionImpl<T> implements UiStateException<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool isLoading, Exception? exception, T? data)? loading,
-    TResult? Function(Exception exception, bool isLoading, T? data)? exception,
-    TResult? Function(T data, bool isLoading, Exception? exception)? success,
+    TResult? Function(
+            bool isLoading, SingleObserver<Exception>? exception, T? data)?
+        loading,
+    TResult? Function(
+            SingleObserver<Exception> exception, bool isLoading, T? data)?
+        exception,
+    TResult? Function(
+            T data, bool isLoading, SingleObserver<Exception>? exception)?
+        success,
   }) {
     return exception?.call(this.exception, isLoading, data);
   }
@@ -395,9 +436,15 @@ class _$UiStateExceptionImpl<T> implements UiStateException<T> {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool isLoading, Exception? exception, T? data)? loading,
-    TResult Function(Exception exception, bool isLoading, T? data)? exception,
-    TResult Function(T data, bool isLoading, Exception? exception)? success,
+    TResult Function(
+            bool isLoading, SingleObserver<Exception>? exception, T? data)?
+        loading,
+    TResult Function(
+            SingleObserver<Exception> exception, bool isLoading, T? data)?
+        exception,
+    TResult Function(
+            T data, bool isLoading, SingleObserver<Exception>? exception)?
+        success,
     required TResult orElse(),
   }) {
     if (exception != null) {
@@ -442,11 +489,11 @@ class _$UiStateExceptionImpl<T> implements UiStateException<T> {
 }
 
 abstract class UiStateException<T> implements UiState<T> {
-  const factory UiStateException(final Exception exception,
+  const factory UiStateException(final SingleObserver<Exception> exception,
       {final bool isLoading, final T? data}) = _$UiStateExceptionImpl<T>;
 
   @override
-  Exception get exception;
+  SingleObserver<Exception> get exception;
   @override
   bool get isLoading;
   @override
@@ -465,7 +512,7 @@ abstract class _$$UiStateSuccessImplCopyWith<T, $Res>
       __$$UiStateSuccessImplCopyWithImpl<T, $Res>;
   @override
   @useResult
-  $Res call({T data, bool isLoading, Exception? exception});
+  $Res call({T data, bool isLoading, SingleObserver<Exception>? exception});
 }
 
 /// @nodoc
@@ -495,7 +542,7 @@ class __$$UiStateSuccessImplCopyWithImpl<T, $Res>
       exception: freezed == exception
           ? _value.exception
           : exception // ignore: cast_nullable_to_non_nullable
-              as Exception?,
+              as SingleObserver<Exception>?,
     ));
   }
 }
@@ -513,7 +560,7 @@ class _$UiStateSuccessImpl<T> implements UiStateSuccess<T> {
   final bool isLoading;
   @override
   @JsonKey()
-  final Exception? exception;
+  final SingleObserver<Exception>? exception;
 
   @override
   String toString() {
@@ -546,11 +593,14 @@ class _$UiStateSuccessImpl<T> implements UiStateSuccess<T> {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(bool isLoading, Exception? exception, T? data)
+    required TResult Function(
+            bool isLoading, SingleObserver<Exception>? exception, T? data)
         loading,
-    required TResult Function(Exception exception, bool isLoading, T? data)
+    required TResult Function(
+            SingleObserver<Exception> exception, bool isLoading, T? data)
         exception,
-    required TResult Function(T data, bool isLoading, Exception? exception)
+    required TResult Function(
+            T data, bool isLoading, SingleObserver<Exception>? exception)
         success,
   }) {
     return success(data, isLoading, this.exception);
@@ -559,9 +609,15 @@ class _$UiStateSuccessImpl<T> implements UiStateSuccess<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool isLoading, Exception? exception, T? data)? loading,
-    TResult? Function(Exception exception, bool isLoading, T? data)? exception,
-    TResult? Function(T data, bool isLoading, Exception? exception)? success,
+    TResult? Function(
+            bool isLoading, SingleObserver<Exception>? exception, T? data)?
+        loading,
+    TResult? Function(
+            SingleObserver<Exception> exception, bool isLoading, T? data)?
+        exception,
+    TResult? Function(
+            T data, bool isLoading, SingleObserver<Exception>? exception)?
+        success,
   }) {
     return success?.call(data, isLoading, this.exception);
   }
@@ -569,9 +625,15 @@ class _$UiStateSuccessImpl<T> implements UiStateSuccess<T> {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool isLoading, Exception? exception, T? data)? loading,
-    TResult Function(Exception exception, bool isLoading, T? data)? exception,
-    TResult Function(T data, bool isLoading, Exception? exception)? success,
+    TResult Function(
+            bool isLoading, SingleObserver<Exception>? exception, T? data)?
+        loading,
+    TResult Function(
+            SingleObserver<Exception> exception, bool isLoading, T? data)?
+        exception,
+    TResult Function(
+            T data, bool isLoading, SingleObserver<Exception>? exception)?
+        success,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -618,14 +680,14 @@ class _$UiStateSuccessImpl<T> implements UiStateSuccess<T> {
 abstract class UiStateSuccess<T> implements UiState<T> {
   const factory UiStateSuccess(final T data,
       {final bool isLoading,
-      final Exception? exception}) = _$UiStateSuccessImpl<T>;
+      final SingleObserver<Exception>? exception}) = _$UiStateSuccessImpl<T>;
 
   @override
   T get data;
   @override
   bool get isLoading;
   @override
-  Exception? get exception;
+  SingleObserver<Exception>? get exception;
   @override
   @JsonKey(ignore: true)
   _$$UiStateSuccessImplCopyWith<T, _$UiStateSuccessImpl<T>> get copyWith =>
