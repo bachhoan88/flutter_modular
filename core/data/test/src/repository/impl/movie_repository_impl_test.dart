@@ -60,7 +60,7 @@ void main() {
 
   test('getMovieInfo returns expected MovieInfo on success', () async {
     const movieId = 1;
-    final movieInfo = MovieInfo(id: movieId, title: 'Test Movie', overview: 'Test Overview');
+    const movieInfo = MovieInfo(id: movieId, title: 'Test Movie', overview: 'Test Overview');
     when(movieApi.getMovieInfo(movieId, apiKey)).thenAnswer((_) async => movieInfo);
 
     final result = await movieRepositoryImpl.getMovieInfo(movieId);

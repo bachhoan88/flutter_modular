@@ -1,4 +1,5 @@
 import 'package:core_model/models.dart';
+import 'package:core_ui/uis.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:feature_home/src/ui/component/movie_view_holder.dart';
 import 'package:flutter/material.dart';
@@ -9,15 +10,15 @@ class PopularView extends StatelessWidget {
   final Function()? actionLoadAll;
 
   const PopularView({
-    Key? key,
+    super.key,
     required this.movies,
     this.actionOpenMovie,
     this.actionLoadAll,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
-    final contentHeight = 4.0 * (MediaQuery.of(context).size.width / 2.4) / 3;
+    final contentHeight = 4.0 * (context.displaySize.width / 2.4) / 3;
     return Column(
       children: [
         Container(
@@ -30,7 +31,7 @@ class PopularView extends StatelessWidget {
                 flex: 1,
                 child: Text(
                   'popular'.tr(),
-                  style: Theme.of(context).textTheme.headlineSmall,
+                  style: context.textTheme.headlineSmall,
                 ),
               ),
               IconButton(

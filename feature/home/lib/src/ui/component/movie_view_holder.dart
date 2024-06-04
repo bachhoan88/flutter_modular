@@ -12,7 +12,7 @@ class MovieViewHolder extends BaseViewHolder<Movie> {
 
   @override
   Widget createContent(BuildContext context, Movie data) {
-    final width = MediaQuery.of(context).size.width / 2.6;
+    final width = context.displaySize.width / 2.6;
 
     return Container(
       width: width,

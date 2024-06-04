@@ -11,7 +11,7 @@ class ScreenshotViewHolder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width / 2.4;
+    final width = context.displaySize.width / 2.4;
     return Container(
       width: width,
       height: double.infinity,
