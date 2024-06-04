@@ -1,3 +1,4 @@
+import 'package:core_common/commons.dart';
 import 'package:core_data/datas.dart';
 import 'package:core_ui/uis.dart';
 import 'package:feature_detail/src/ui/detail_ui_state.dart';
@@ -32,7 +33,7 @@ class DetailViewModel extends BaseViewModel<UiState<DetailData>> {
       ));
     } on Exception catch (e) {
       handleExceptionState(e);
-      state = UiStateException(e);
+      state = UiStateException(SingleObserver(data: e));
     }
   }
 }

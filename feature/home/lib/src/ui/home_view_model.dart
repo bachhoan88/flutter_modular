@@ -1,3 +1,4 @@
+import 'package:core_common/commons.dart';
 import 'package:core_data/datas.dart';
 import 'package:core_ui/uis.dart';
 import 'package:feature_home/src/ui/home_ui_state.dart';
@@ -27,7 +28,7 @@ class HomeViewModel extends BaseViewModel<UiState<HomeData>> {
 
     } on Exception catch (e) {
       handleExceptionState(e);
-      state = UiStateException(e);
+      state = UiStateException(SingleObserver(data: e));
     }
   }
 }

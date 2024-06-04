@@ -54,7 +54,7 @@ class ExceptionStatelessWidget<V extends BaseUiState> extends StatelessWidget {
 
   Widget _exceptionView(BuildContext context) {
     return Consumer(builder: (context, ref, _) {
-      final exception = ref.watch(viewModelProvider.select((value) => value.exception));
+      final exception = ref.watch(viewModelProvider.select((value) => value.exception))?.observer();
       if (exception != null && exception is ExceptionState) {
         final ExceptionState exceptionState = exception;
         return switch (exceptionState) {
