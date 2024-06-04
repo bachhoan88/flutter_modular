@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
           context.setLocale(const Locale('en', 'US'));
         }
       }),
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: context.colorScheme.surface,
       body: ExceptionStatelessWidget<UiState<HomeData>>(
         viewModelProvider: homeViewModelProvider,
         child: LayoutBuilder(

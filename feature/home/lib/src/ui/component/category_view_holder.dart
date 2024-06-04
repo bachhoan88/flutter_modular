@@ -12,7 +12,7 @@ class CategoryViewHolder extends BaseViewHolder<Movie> {
 
   @override
   Widget createContent(BuildContext context, Movie data) {
-    final width = MediaQuery.of(context).size.width / 2.5;
+    final width = context.displaySize.width / 2.5;
     return Container(
       width: width,
       height: double.infinity,
@@ -60,7 +60,7 @@ class CategoryViewHolder extends BaseViewHolder<Movie> {
                   child: Text(
                     data.releaseDate ?? '',
                     maxLines: 1,
-                    style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: Colors.white),
+                    style: context.textTheme.headlineSmall?.copyWith(color: Colors.white),
                   ),
                 )
               ],

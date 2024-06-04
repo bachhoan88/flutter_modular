@@ -12,3 +12,4 @@ export 'src/error_page.dart';
 export 'src/custom_dialog.dart';
 export 'src/base_view_holder.dart';
 export 'src/star_rating.dart';
+export 'src/context_extension.dart' show ContextExtension;

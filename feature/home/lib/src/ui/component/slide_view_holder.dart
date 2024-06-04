@@ -12,7 +12,7 @@ class SlideViewHolder extends BaseViewHolder<Movie> {
 
   @override
   Widget createContent(BuildContext context, Movie data) {
-    final width = MediaQuery.of(context).size.width;
+    final width = context.displaySize.width;
 
     return Container(
       width: width,
@@ -63,8 +63,7 @@ class SlideViewHolder extends BaseViewHolder<Movie> {
                     data.title?.toUpperCase() ?? '',
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
-                    style: Theme.of(context)
-                        .textTheme
+                    style: context.textTheme
                         .headlineMedium
                         ?.copyWith(color: Colors.white),
                   ),

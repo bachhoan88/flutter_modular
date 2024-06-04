@@ -81,7 +81,7 @@ class DetailPage extends ConsumerWidget {
   }
 
   Widget _createDetailHeader(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
+    final width = context.displaySize.width;
 
     return Container(
       padding: const EdgeInsets.all(0.0),

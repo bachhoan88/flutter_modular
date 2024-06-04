@@ -1,3 +1,4 @@
+import 'package:core_ui/src/context_extension.dart';
 import 'package:flutter/material.dart';
 
 typedef RatingChangeCallback = void Function(double rating);
@@ -11,18 +12,18 @@ class StarRating extends StatelessWidget {
   final double? size;
 
   const StarRating({
-    Key? key,
+    super.key,
     this.starCount = 5,
     this.rating = .0,
     this.onRatingChanged,
     this.color,
     this.borderColor,
     this.size,
-  }) : super(key: key);
+  });
 
   Widget buildStar(BuildContext context, int index) {
     Icon icon;
-    var ratingStarSizeRelativeToScreen = MediaQuery.of(context).size.width / starCount;
+    var ratingStarSizeRelativeToScreen = context.displaySize.width / starCount;
 
     if (index >= rating) {
       icon = Icon(
@@ -33,13 +34,13 @@ class StarRating extends StatelessWidget {
     } else if (index > rating - 1 && index < rating) {
       icon = Icon(
         Icons.star_half,
-        color: color ?? Theme.of(context).primaryColor,
+        color: color ?? context.themeData.primaryColor,
         size: size ?? ratingStarSizeRelativeToScreen,
       );
     } else {
       icon = Icon(
         Icons.star,
-        color: color ?? Theme.of(context).primaryColor,
+        color: color ?? context.themeData.primaryColor,
         size: size ?? ratingStarSizeRelativeToScreen,
       );
     }

@@ -5,9 +5,9 @@ abstract class BaseViewHolder<T> extends StatelessWidget {
   final Function(T)? _actionOnItemClicked;
   Widget createContent(BuildContext context, T data);
 
-  const BaseViewHolder(T data, Function(T)? actionOnItemClicked, {Key? key})
+  const BaseViewHolder(T data, Function(T)? actionOnItemClicked, {super.key})
       : _data = data,
-        _actionOnItemClicked = actionOnItemClicked, super(key: key);
+        _actionOnItemClicked = actionOnItemClicked;
 
   @override
   Widget build(BuildContext context) {

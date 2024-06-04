@@ -1,4 +1,5 @@
 import 'package:core_model/models.dart';
+import 'package:core_ui/uis.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:feature_detail/src/ui/component/screenshot_view_holder.dart';
 import 'package:flutter/material.dart';
@@ -9,15 +10,15 @@ class ScreenshotView extends StatelessWidget {
   final Function() actionLoadAll;
 
   const ScreenshotView({
-    Key? key,
+    super.key,
     required this.images,
     required this.actionOpenImage,
     required this.actionLoadAll,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
-    final contentHeight = 2.0 * (MediaQuery.of(context).size.width / 2.2) / 3.0;
+    final contentHeight = 2.0 * (context.displaySize.width / 2.2) / 3.0;
     return Column(
       children: [
         Container(
@@ -30,7 +31,7 @@ class ScreenshotView extends StatelessWidget {
                 flex: 1,
                 child: Text(
                   'screenshot'.tr(),
-                  style: Theme.of(context).textTheme.headlineSmall,
+                  style: context.textTheme.headlineSmall,
                 ),
               ),
               IconButton(

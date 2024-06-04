@@ -5,10 +5,10 @@ class FavoriteIconWidget extends StatefulWidget {
   final bool? isFavorite;
 
   const FavoriteIconWidget({
-    Key? key,
+    super.key,
     this.isFavorite,
     this.onFavoriteChanged,
-  }) : super(key: key);
+  });
 
   @override
   State<StatefulWidget> createState() => _FavoriteIconState();

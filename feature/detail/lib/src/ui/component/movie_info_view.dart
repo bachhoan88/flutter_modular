@@ -20,7 +20,7 @@ class MovieInfoView extends StatelessWidget {
             movieInfo.title ?? '',
             maxLines: 2,
             textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.headlineMedium,
+            style: context.textTheme.headlineMedium,
           ),
         ),
         Container(
@@ -29,7 +29,7 @@ class MovieInfoView extends StatelessWidget {
             movieInfo.genres?.categories ?? '',
             maxLines: 2,
             textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.bodyMedium,
+            style: context.textTheme.bodyMedium,
           ),
         ),
         Container(
@@ -52,11 +52,11 @@ class MovieInfoView extends StatelessWidget {
                 children: [
                   Text(
                     'year'.tr(),
-                    style: Theme.of(context).textTheme.bodyMedium,
+                    style: context.textTheme.bodyMedium,
                   ),
                   Text(
                     movieInfo.releaseDate?.year ?? '',
-                    style: Theme.of(context).textTheme.bodyMedium,
+                    style: context.textTheme.bodyMedium,
                   )
                 ],
               ),
@@ -64,11 +64,11 @@ class MovieInfoView extends StatelessWidget {
                 children: [
                   Text(
                     'country'.tr(),
-                    style: Theme.of(context).textTheme.bodyMedium,
+                    style: context.textTheme.bodyMedium,
                   ),
                   Text(
                     movieInfo.countries?.countries ?? '',
-                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(fontSize: 18.0),
+                    style: context.textTheme.headlineMedium?.copyWith(fontSize: 18.0),
                   )
                 ],
               ),
@@ -76,11 +76,11 @@ class MovieInfoView extends StatelessWidget {
                 children: [
                   Text(
                     'length'.tr(),
-                    style: Theme.of(context).textTheme.bodyMedium,
+                    style: context.textTheme.bodyMedium,
                   ),
                   Text(
                     movieInfo.runtime.toString(),
-                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(fontSize: 18.0),
+                    style: context.textTheme.headlineMedium?.copyWith(fontSize: 18.0),
                   )
                 ],
               ),
@@ -109,7 +109,7 @@ class MovieInfoView extends StatelessWidget {
             textAlign: TextAlign.justify,
             maxLines: expanded ? 100 : 5,
             overflow: TextOverflow.ellipsis,
-            style: Theme.of(context).textTheme.bodyMedium,
+            style: context.textTheme.bodyMedium,
           ),
         ),
       );
