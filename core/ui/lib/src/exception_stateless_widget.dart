@@ -54,10 +54,19 @@ class ExceptionStatelessWidget<V extends BaseUiState> extends StatelessWidget {
 
   Widget _exceptionView(BuildContext context) {
     return Consumer(builder: (context, ref, _) {
-      final exception = ref.watch(viewModelProvider.select((value) => value.exception))?.observer();
-      if (exception != null && exception is ExceptionState) {
-        final ExceptionState exceptionState = exception;
-        return switch (exceptionState) {
+      final singleObserverException = ref.watch(viewModelProvider.select((value) => value.exception));
+      final isObserved = singleObserverException?.isObserved ?? false;
+      final exception = singleObserverException?.observer() ?? singleObserverException?.value;
+
+      if (exception is OnPageException) {
+        return ErrorPage(
+          message: exception.messageId?.tr() ?? exception.message ?? '',
+          retry: () {
+            _pageErrorRetry?.call(context, ref);
+          },
+        );
+      } else if (!isObserved && exception != null && exception is ExceptionState) {
+        return switch (exception) {
           ToastException(:final String? message, :final String? messageId) => () {
               WidgetsBinding.instance.addPostFrameCallback((_) {
                 Fluttertoast.showToast(msg: messageId?.tr() ?? message ?? '');
@@ -71,12 +80,6 @@ class ExceptionStatelessWidget<V extends BaseUiState> extends StatelessWidget {
               });
               return const SizedBox();
             }(),
-          OnPageException(:final String? message, :final String? messageId) => ErrorPage(
-              message: messageId?.tr() ?? message ?? '',
-              retry: () {
-                _pageErrorRetry?.call(context, ref);
-              },
-            ),
           AlertException(:final String? titleId, :final String? message, :final String? messageId) => () {
               WidgetsBinding.instance.addPostFrameCallback((_) {
                 _showAlert(context, titleId, messageId, message);
@@ -89,8 +92,16 @@ class ExceptionStatelessWidget<V extends BaseUiState> extends StatelessWidget {
               });
               return const SizedBox();
             }(),
+
+          /// Typically, displaying an error for a specific field such as email/password is a type of State,
+          /// and it will be handled in the UI Implementation.
           InlineException() => const SizedBox(),
+
+          /// Typically, switching to another screen is a type of State, so it will be handled in the UI Implementation.
           RedirectException() => const SizedBox(),
+
+          /// OnPageException has been handled before
+          OnPageException() => const SizedBox(),
         };
       } else {
         return const SizedBox();

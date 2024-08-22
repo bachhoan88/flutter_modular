@@ -13,6 +13,8 @@ class SingleObserver<T> {
     return _value;
   }
 
+  bool get isObserved => _observed;
+
   void changeValue(T? newValue) {
     _value = newValue;
     _observed = false;
