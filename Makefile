@@ -37,9 +37,14 @@ test_all:
 				'*/di/*' \; \
         	-execdir genhtml coverage/new_lcov.info --output=coverage \;
 
+upgrade_libs:
+	@find . -name pubspec.yaml -exec echo "### Upgrade libs {}" \; \
+    	-execdir flutter pub outdated \; \
+    	-execdir flutter packages upgrade --major-versions \;
+
 # Runs `flutter clean` in all the project packages.
 clean_all:
 	@find . -name pubspec.yaml -exec echo "### Cleaning {}" \; \
 	-execdir flutter clean \;
 
-.PHONY: pub_get pub_get_all generate_sources_all analyze_all test_all clean_all
+.PHONY: pub_get pub_get_all generate_sources_all analyze_all test_all upgrade_libs clean_all
