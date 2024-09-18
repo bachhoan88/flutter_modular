@@ -40,7 +40,7 @@ class DioBuilder extends DioMixin implements Dio {
 
     // token
     if (!ignoredToken) {
-      interceptors.add(UnauthorizedInterceptor(currentDio: this));
+      interceptors.add(UnauthorizedInterceptor());
     }
 
     // create default http client
