@@ -1,13 +1,13 @@
 import 'dart:io';
 
+import 'package:core_network/networks.dart';
 import 'package:dio/dio.dart';
 
 class UnauthorizedInterceptor extends QueuedInterceptor {
-  final Dio currentDio;
   final String auth = 'Authorization';
   final String bearer = 'Bearer';
 
-  UnauthorizedInterceptor({required this.currentDio});
+  UnauthorizedInterceptor();
 
   @override
   void onError(DioException err, ErrorInterceptorHandler handler) async {
@@ -41,27 +41,7 @@ class UnauthorizedInterceptor extends QueuedInterceptor {
               .update(auth, (value) => (value.toString().contains(bearer) == true) ? '$bearer $token' : token);
         }
 
-        final response = await currentDio.request(
-          request.path,
-          data: request.data,
-          queryParameters: request.queryParameters,
-          cancelToken: request.cancelToken,
-          options: Options(
-              method: request.method,
-              sendTimeout: request.sendTimeout,
-              extra: request.extra,
-              headers: request.headers,
-              responseType: request.responseType,
-              contentType: request.contentType,
-              receiveDataWhenStatusError: request.receiveDataWhenStatusError,
-              followRedirects: request.followRedirects,
-              maxRedirects: request.maxRedirects,
-              requestEncoder: request.requestEncoder,
-              responseDecoder: request.responseDecoder,
-              listFormat: request.listFormat),
-          onReceiveProgress: request.onReceiveProgress,
-        );
-
+        final response = await DioBuilder.getInstance().fetch(request);
         handler.resolve(response);
       } on DioException catch (e) {
         handler.next(e);
@@ -72,6 +52,7 @@ class UnauthorizedInterceptor extends QueuedInterceptor {
   }
 
   Future<String> requestToken() async {
+    // Please use new instance of Dio to refresh token 
     return 'token';
   }
 }
