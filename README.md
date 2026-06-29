@@ -1,15 +1,16 @@
 # Environment
 
 ## Framework
-- Flutter: 3.22.3
-- Dart: 3.4.4
+- Flutter: 3.35.6
+- Dart: 3.9.2
 
 ## iOS
-- iOS 12+
+- iOS 13+
 
 ## Android
-- Min Android: 5.0
-- Target SDK 34 (Android 14)
+- Min Android: 5.0 (API 21)
+- Target SDK 35
+- Build toolchain: Gradle 8.9, Android Gradle Plugin 8.7.3, Kotlin 2.1.0, Java 17
 
 # Architecture
 
