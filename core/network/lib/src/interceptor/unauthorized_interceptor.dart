@@ -7,11 +7,21 @@ class UnauthorizedInterceptor extends QueuedInterceptor {
   final String auth = 'Authorization';
   final String bearer = 'Bearer';
 
+  /// Marks a request that has already been replayed once after a token
+  /// refresh, so a repeated 401 does not trigger another retry (avoids loops).
+  static const String _retriedKey = 'x-unauthorized-retried';
+
   UnauthorizedInterceptor();
 
   @override
   void onError(DioException err, ErrorInterceptorHandler handler) async {
     if (err.response != null && err.response?.statusCode == HttpStatus.unauthorized) {
+      // If we already retried this request once and still get 401, the token
+      // is genuinely invalid: stop here and let the error propagate.
+      if (err.requestOptions.extra[_retriedKey] == true) {
+        return super.onError(err, handler);
+      }
+
       /// Error 401 Unauthorized
       ///
       /// Refresh token on here, it depends your business
@@ -41,7 +51,11 @@ class UnauthorizedInterceptor extends QueuedInterceptor {
               .update(auth, (value) => (value.toString().contains(bearer) == true) ? '$bearer $token' : token);
         }
 
-        final response = await DioBuilder.getInstance().fetch(request);
+        // Replay on a token-less Dio (ignoredToken: true) so THIS interceptor
+        // is not attached to the retry — otherwise a repeated 401 would
+        // re-enter onError and recurse indefinitely.
+        request.extra[_retriedKey] = true;
+        final response = await DioBuilder.getInstance(ignoredToken: true).fetch(request);
         handler.resolve(response);
       } on DioException catch (e) {
         handler.next(e);
@@ -52,7 +66,7 @@ class UnauthorizedInterceptor extends QueuedInterceptor {
   }
 
   Future<String> requestToken() async {
-    // Please use new instance of Dio to refresh token 
+    // Please use new instance of Dio to refresh token
     return 'token';
   }
 }
