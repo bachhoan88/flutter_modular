@@ -33,6 +33,8 @@ flutter_gen:
     flutter_svg: true
   assets:
     enabled: true
+    outputs:
+      package_parameter_enabled: true
   fonts:
     enabled: true
 

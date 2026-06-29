@@ -27,6 +27,8 @@ class $AssetsImagesGen {
 class Assets {
   const Assets._();
 
+  static const String package = 'core_designsystem';
+
   static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 
@@ -39,6 +41,8 @@ class AssetGenImage {
   });
 
   final String _assetName;
+
+  static const String package = 'core_designsystem';
 
   final Size? size;
   final Set<String> flavors;
@@ -64,7 +68,7 @@ class AssetGenImage {
     bool matchTextDirection = false,
     bool gaplessPlayback = true,
     bool isAntiAlias = false,
-    String? package,
+    @Deprecated('Do not specify package for a generated library asset') String? package = package,
     FilterQuality filterQuality = FilterQuality.medium,
     int? cacheWidth,
     int? cacheHeight,
@@ -99,7 +103,7 @@ class AssetGenImage {
 
   ImageProvider provider({
     AssetBundle? bundle,
-    String? package,
+    @Deprecated('Do not specify package for a generated library asset') String? package = package,
   }) {
     return AssetImage(
       _assetName,
@@ -110,7 +114,7 @@ class AssetGenImage {
 
   String get path => _assetName;
 
-  String get keyName => _assetName;
+  String get keyName => 'packages/core_designsystem/$_assetName';
 }
 
 class AssetGenImageAnimation {
