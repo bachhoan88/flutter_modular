@@ -16,4 +16,3 @@ export 'src/exception_state.dart'
         ExceptionState;
 export 'src/redirect.dart';
 export 'src/tag.dart';
-export 'src/single_observer.dart';

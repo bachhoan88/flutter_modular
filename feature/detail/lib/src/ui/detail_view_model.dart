@@ -1,39 +1,39 @@
-import 'package:core_common/commons.dart';
 import 'package:core_data/datas.dart';
-import 'package:core_ui/uis.dart';
 import 'package:feature_detail/src/ui/detail_ui_state.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-class DetailViewModel extends BaseViewModel<UiState<DetailData>> {
-  final MovieRepository _movieRepository;
-  final int movieId;
+part 'detail_view_model.g.dart';
 
-  DetailViewModel(this.movieId, MovieRepository movieRepository)
-      : _movieRepository = movieRepository,
-        super(const UiStateLoading(true)) {
-    _getMovieInfo();
+/// Detail screen view model as a family [AsyncNotifier] (Riverpod codegen),
+/// parameterised by [movieId]. Auto-disposes when no longer watched.
+///
+/// Mirrors feature/home: data flows back from [build] and is represented by
+/// [AsyncValue]; the page reacts to errors via `ref.listen`.
+@riverpod
+class DetailViewModel extends _$DetailViewModel {
+  @override
+  Future<DetailData> build(int movieId) async {
+    final movieRepository = ref.watch(movieRepositoryProvider);
+
+    // Start both requests before awaiting so they run concurrently while
+    // keeping their concrete types (unlike Future.wait, which would widen).
+    final imagesFuture = movieRepository.getMovieImages(movieId);
+    final infoFuture = movieRepository.getMovieInfo(movieId);
+    final movieImage = await imagesFuture;
+    final movieInfo = await infoFuture;
+
+    return DetailData(
+      images: movieImage.backdrops ?? [],
+      movieInfo: movieInfo,
+      isDesExpanded: false,
+    );
   }
 
+  /// Toggles the overview expand flag on the loaded data.
   void toggleExpand() {
-    final DetailData? data = state.data;
-    if (data != null && state is UiStateSuccess) {
-      final UiStateSuccess<DetailData> currentState = state as UiStateSuccess<DetailData>;
-      state = currentState.copyWith(data: currentState.data.copyWith(isDesExpanded: !data.isDesExpanded));
-    }
-  }
-
-  void _getMovieInfo() async {
-    try {
-      final movieImage = await _movieRepository.getMovieImages(movieId);
-      final movieInfo = await _movieRepository.getMovieInfo(movieId);
-
-      state = UiStateSuccess(DetailData(
-        images: movieImage.backdrops ?? [],
-        movieInfo: movieInfo,
-        isDesExpanded: false,
-      ));
-    } on Exception catch (e) {
-      handleExceptionState(e);
-      state = UiStateException(SingleObserver(data: e));
+    final current = state.valueOrNull;
+    if (current != null) {
+      state = AsyncData(current.copyWith(isDesExpanded: !current.isDesExpanded));
     }
   }
 }

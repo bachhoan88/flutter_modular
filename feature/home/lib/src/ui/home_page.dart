@@ -8,7 +8,6 @@ import 'package:feature_home/src/ui/component/category_view.dart';
 import 'package:feature_home/src/ui/component/my_list_view.dart';
 import 'package:feature_home/src/ui/component/popular_view.dart';
 import 'package:feature_home/src/ui/component/slider_view.dart';
-import 'package:feature_home/src/ui/home_exception_handler.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -19,11 +18,9 @@ class HomePage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // Side-effect channel: transient errors (toast/snackbar/alert/dialog) are
-    // dispatched here via ref.listen — never from build, and without a
+    // dispatched via ref.listen — never from build, and without a
     // SingleObserver to de-duplicate.
-    ref.listen(homeViewModelProvider, (previous, next) {
-      next.whenOrNull(error: (error, _) => showExceptionBehavior(context, error));
-    });
+    ref.listenException(context, homeViewModelProvider);
 
     return Scaffold(
       appBar: TopAppBar(actionDrawer: () {
