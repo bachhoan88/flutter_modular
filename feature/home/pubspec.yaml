@@ -24,7 +24,6 @@ dependencies:
     path: ../../core/designsystem
   freezed_annotation: ^3.0.0
   json_annotation: ^4.8.1
-  flutter_gen_runner: ^5.4.0
   equatable: ^2.0.5
   hooks_riverpod: ^2.6.1
   riverpod_annotation: ^2.6.1

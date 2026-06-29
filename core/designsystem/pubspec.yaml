@@ -12,7 +12,6 @@ dependencies:
 
   cupertino_icons: ^1.0.6
   flutter_svg: ^2.0.9
-  flutter_gen_runner: ^5.4.0
   freezed_annotation: ^3.0.0
   json_annotation: ^4.8.1
   equatable: ^2.0.5

@@ -1,6 +1,5 @@
-// dart format width=80
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -79,6 +78,283 @@ class _$ExceptionStateCopyWithImpl<$Res>
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [ExceptionState].
+extension ExceptionStatePatterns on ExceptionState {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SnackBarException value)? snackBar,
+    TResult Function(ToastException value)? toast,
+    TResult Function(OnPageException value)? onPage,
+    TResult Function(InlineException value)? inline,
+    TResult Function(AlertException value)? alert,
+    TResult Function(RedirectException value)? redirect,
+    TResult Function(DialogException value)? dialog,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case SnackBarException() when snackBar != null:
+        return snackBar(_that);
+      case ToastException() when toast != null:
+        return toast(_that);
+      case OnPageException() when onPage != null:
+        return onPage(_that);
+      case InlineException() when inline != null:
+        return inline(_that);
+      case AlertException() when alert != null:
+        return alert(_that);
+      case RedirectException() when redirect != null:
+        return redirect(_that);
+      case DialogException() when dialog != null:
+        return dialog(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SnackBarException value) snackBar,
+    required TResult Function(ToastException value) toast,
+    required TResult Function(OnPageException value) onPage,
+    required TResult Function(InlineException value) inline,
+    required TResult Function(AlertException value) alert,
+    required TResult Function(RedirectException value) redirect,
+    required TResult Function(DialogException value) dialog,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case SnackBarException():
+        return snackBar(_that);
+      case ToastException():
+        return toast(_that);
+      case OnPageException():
+        return onPage(_that);
+      case InlineException():
+        return inline(_that);
+      case AlertException():
+        return alert(_that);
+      case RedirectException():
+        return redirect(_that);
+      case DialogException():
+        return dialog(_that);
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(SnackBarException value)? snackBar,
+    TResult? Function(ToastException value)? toast,
+    TResult? Function(OnPageException value)? onPage,
+    TResult? Function(InlineException value)? inline,
+    TResult? Function(AlertException value)? alert,
+    TResult? Function(RedirectException value)? redirect,
+    TResult? Function(DialogException value)? dialog,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case SnackBarException() when snackBar != null:
+        return snackBar(_that);
+      case ToastException() when toast != null:
+        return toast(_that);
+      case OnPageException() when onPage != null:
+        return onPage(_that);
+      case InlineException() when inline != null:
+        return inline(_that);
+      case AlertException() when alert != null:
+        return alert(_that);
+      case RedirectException() when redirect != null:
+        return redirect(_that);
+      case DialogException() when dialog != null:
+        return dialog(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int code, String? messageId, String? message)? snackBar,
+    TResult Function(int code, String? messageId, String? message)? toast,
+    TResult Function(int code, String? messageId, String? message)? onPage,
+    TResult Function(int code, List<Tag> tags, String? message)? inline,
+    TResult Function(
+            int code, String? titleId, String? messageId, String? message)?
+        alert,
+    TResult Function(
+            int code, Redirect redirect, dynamic data, String? message)?
+        redirect,
+    TResult Function(int code, Dialogs dialogs, String? message)? dialog,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case SnackBarException() when snackBar != null:
+        return snackBar(_that.code, _that.messageId, _that.message);
+      case ToastException() when toast != null:
+        return toast(_that.code, _that.messageId, _that.message);
+      case OnPageException() when onPage != null:
+        return onPage(_that.code, _that.messageId, _that.message);
+      case InlineException() when inline != null:
+        return inline(_that.code, _that.tags, _that.message);
+      case AlertException() when alert != null:
+        return alert(_that.code, _that.titleId, _that.messageId, _that.message);
+      case RedirectException() when redirect != null:
+        return redirect(_that.code, _that.redirect, _that.data, _that.message);
+      case DialogException() when dialog != null:
+        return dialog(_that.code, _that.dialogs, _that.message);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int code, String? messageId, String? message)
+        snackBar,
+    required TResult Function(int code, String? messageId, String? message)
+        toast,
+    required TResult Function(int code, String? messageId, String? message)
+        onPage,
+    required TResult Function(int code, List<Tag> tags, String? message) inline,
+    required TResult Function(
+            int code, String? titleId, String? messageId, String? message)
+        alert,
+    required TResult Function(
+            int code, Redirect redirect, dynamic data, String? message)
+        redirect,
+    required TResult Function(int code, Dialogs dialogs, String? message)
+        dialog,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case SnackBarException():
+        return snackBar(_that.code, _that.messageId, _that.message);
+      case ToastException():
+        return toast(_that.code, _that.messageId, _that.message);
+      case OnPageException():
+        return onPage(_that.code, _that.messageId, _that.message);
+      case InlineException():
+        return inline(_that.code, _that.tags, _that.message);
+      case AlertException():
+        return alert(_that.code, _that.titleId, _that.messageId, _that.message);
+      case RedirectException():
+        return redirect(_that.code, _that.redirect, _that.data, _that.message);
+      case DialogException():
+        return dialog(_that.code, _that.dialogs, _that.message);
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int code, String? messageId, String? message)? snackBar,
+    TResult? Function(int code, String? messageId, String? message)? toast,
+    TResult? Function(int code, String? messageId, String? message)? onPage,
+    TResult? Function(int code, List<Tag> tags, String? message)? inline,
+    TResult? Function(
+            int code, String? titleId, String? messageId, String? message)?
+        alert,
+    TResult? Function(
+            int code, Redirect redirect, dynamic data, String? message)?
+        redirect,
+    TResult? Function(int code, Dialogs dialogs, String? message)? dialog,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case SnackBarException() when snackBar != null:
+        return snackBar(_that.code, _that.messageId, _that.message);
+      case ToastException() when toast != null:
+        return toast(_that.code, _that.messageId, _that.message);
+      case OnPageException() when onPage != null:
+        return onPage(_that.code, _that.messageId, _that.message);
+      case InlineException() when inline != null:
+        return inline(_that.code, _that.tags, _that.message);
+      case AlertException() when alert != null:
+        return alert(_that.code, _that.titleId, _that.messageId, _that.message);
+      case RedirectException() when redirect != null:
+        return redirect(_that.code, _that.redirect, _that.data, _that.message);
+      case DialogException() when dialog != null:
+        return dialog(_that.code, _that.dialogs, _that.message);
+      case _:
+        return null;
+    }
   }
 }
 

@@ -15,7 +15,6 @@ dependencies:
   enum_to_string: ^2.0.1
   freezed_annotation: ^3.0.0
   json_annotation: ^4.8.1
-  flutter_gen_runner: ^5.4.0
   equatable: ^2.0.5
 
 dev_dependencies:

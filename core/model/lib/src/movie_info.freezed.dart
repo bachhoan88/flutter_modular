@@ -1,6 +1,5 @@
-// dart format width=80
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -332,6 +331,316 @@ class _$MovieInfoCopyWithImpl<$Res> implements $MovieInfoCopyWith<$Res> {
     return $CollectionCopyWith<$Res>(_self.collection!, (value) {
       return _then(_self.copyWith(collection: value));
     });
+  }
+}
+
+/// Adds pattern-matching-related methods to [MovieInfo].
+extension MovieInfoPatterns on MovieInfo {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_MovieInfo value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _MovieInfo() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_MovieInfo value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _MovieInfo():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_MovieInfo value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _MovieInfo() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            bool? adult,
+            @JsonKey(name: 'backdrop_path') String? backdropPath,
+            @JsonKey(name: 'belongs_to_collection') Collection? collection,
+            int? budget,
+            List<Genre>? genres,
+            String? homepage,
+            int? id,
+            @JsonKey(name: 'imdb_id') String? imdbId,
+            @JsonKey(name: 'original_language') String? originalLanguage,
+            @JsonKey(name: 'original_title') String? originalTitle,
+            String? overview,
+            double? popularity,
+            @JsonKey(name: 'poster_path') String? posterPath,
+            @JsonKey(name: 'release_date') String? releaseDate,
+            int? revenue,
+            int? runtime,
+            String? status,
+            String? tagline,
+            String? title,
+            bool? video,
+            @JsonKey(name: 'vote_average') double? voteAverage,
+            @JsonKey(name: 'vote_count') int? voteCount,
+            @JsonKey(name: 'production_companies') List<Company>? companies,
+            @JsonKey(name: 'production_countries') List<Country>? countries,
+            @JsonKey(name: 'spoken_languages') List<Language>? languages)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _MovieInfo() when $default != null:
+        return $default(
+            _that.adult,
+            _that.backdropPath,
+            _that.collection,
+            _that.budget,
+            _that.genres,
+            _that.homepage,
+            _that.id,
+            _that.imdbId,
+            _that.originalLanguage,
+            _that.originalTitle,
+            _that.overview,
+            _that.popularity,
+            _that.posterPath,
+            _that.releaseDate,
+            _that.revenue,
+            _that.runtime,
+            _that.status,
+            _that.tagline,
+            _that.title,
+            _that.video,
+            _that.voteAverage,
+            _that.voteCount,
+            _that.companies,
+            _that.countries,
+            _that.languages);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            bool? adult,
+            @JsonKey(name: 'backdrop_path') String? backdropPath,
+            @JsonKey(name: 'belongs_to_collection') Collection? collection,
+            int? budget,
+            List<Genre>? genres,
+            String? homepage,
+            int? id,
+            @JsonKey(name: 'imdb_id') String? imdbId,
+            @JsonKey(name: 'original_language') String? originalLanguage,
+            @JsonKey(name: 'original_title') String? originalTitle,
+            String? overview,
+            double? popularity,
+            @JsonKey(name: 'poster_path') String? posterPath,
+            @JsonKey(name: 'release_date') String? releaseDate,
+            int? revenue,
+            int? runtime,
+            String? status,
+            String? tagline,
+            String? title,
+            bool? video,
+            @JsonKey(name: 'vote_average') double? voteAverage,
+            @JsonKey(name: 'vote_count') int? voteCount,
+            @JsonKey(name: 'production_companies') List<Company>? companies,
+            @JsonKey(name: 'production_countries') List<Country>? countries,
+            @JsonKey(name: 'spoken_languages') List<Language>? languages)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _MovieInfo():
+        return $default(
+            _that.adult,
+            _that.backdropPath,
+            _that.collection,
+            _that.budget,
+            _that.genres,
+            _that.homepage,
+            _that.id,
+            _that.imdbId,
+            _that.originalLanguage,
+            _that.originalTitle,
+            _that.overview,
+            _that.popularity,
+            _that.posterPath,
+            _that.releaseDate,
+            _that.revenue,
+            _that.runtime,
+            _that.status,
+            _that.tagline,
+            _that.title,
+            _that.video,
+            _that.voteAverage,
+            _that.voteCount,
+            _that.companies,
+            _that.countries,
+            _that.languages);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            bool? adult,
+            @JsonKey(name: 'backdrop_path') String? backdropPath,
+            @JsonKey(name: 'belongs_to_collection') Collection? collection,
+            int? budget,
+            List<Genre>? genres,
+            String? homepage,
+            int? id,
+            @JsonKey(name: 'imdb_id') String? imdbId,
+            @JsonKey(name: 'original_language') String? originalLanguage,
+            @JsonKey(name: 'original_title') String? originalTitle,
+            String? overview,
+            double? popularity,
+            @JsonKey(name: 'poster_path') String? posterPath,
+            @JsonKey(name: 'release_date') String? releaseDate,
+            int? revenue,
+            int? runtime,
+            String? status,
+            String? tagline,
+            String? title,
+            bool? video,
+            @JsonKey(name: 'vote_average') double? voteAverage,
+            @JsonKey(name: 'vote_count') int? voteCount,
+            @JsonKey(name: 'production_companies') List<Company>? companies,
+            @JsonKey(name: 'production_countries') List<Country>? countries,
+            @JsonKey(name: 'spoken_languages') List<Language>? languages)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _MovieInfo() when $default != null:
+        return $default(
+            _that.adult,
+            _that.backdropPath,
+            _that.collection,
+            _that.budget,
+            _that.genres,
+            _that.homepage,
+            _that.id,
+            _that.imdbId,
+            _that.originalLanguage,
+            _that.originalTitle,
+            _that.overview,
+            _that.popularity,
+            _that.posterPath,
+            _that.releaseDate,
+            _that.revenue,
+            _that.runtime,
+            _that.status,
+            _that.tagline,
+            _that.title,
+            _that.video,
+            _that.voteAverage,
+            _that.voteCount,
+            _that.companies,
+            _that.countries,
+            _that.languages);
+      case _:
+        return null;
+    }
   }
 }
 

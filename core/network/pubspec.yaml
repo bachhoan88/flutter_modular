@@ -13,7 +13,6 @@ dependencies:
 
   freezed_annotation: ^3.0.0
   json_annotation: ^4.8.1
-  flutter_gen_runner: ^5.4.0
   dio: ^5.4.0
   retrofit: ^4.0.3
   package_info_plus: ^8.0.0

@@ -30,11 +30,11 @@ jobs:
       - name: 'Install dependencies'
         run: make pub_get_all
 
-      # NOTE: generated sources (*.g.dart / *.freezed.dart / *.gen.dart) are
-      # committed and are the source of truth here, so CI does not run
-      # build_runner. The flutter_gen_runner build_runner integration is
-      # fragile; regenerate locally with `make generate_sources_all` when
-      # editing freezed/retrofit/riverpod-annotated code and commit the output.
+      # Regenerate freezed / json_serializable / retrofit / riverpod sources.
+      # FlutterGen asset code is generated separately (make gen_assets) and is
+      # not part of build_runner here, which keeps this step reliable.
+      - name: 'Generate sources'
+        run: make generate_sources_all
 
       # Formatting is advisory until the whole codebase is formatted; remove
       # continue-on-error to make it a hard gate afterwards.
