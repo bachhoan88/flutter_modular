@@ -7,8 +7,8 @@ Dio + Retrofit, go_router and Material 3.
 # Environment
 
 ## Framework
-- Flutter: 3.35.6
-- Dart: 3.9.2
+- Flutter: 3.44.4
+- Dart: 3.12.2
 
 ## iOS
 - Minimum deployment target: iOS 13
