@@ -40,7 +40,7 @@ test_all:
 upgrade_libs:
 	@find . -name pubspec.yaml -exec echo "### Upgrade libs {}" \; \
     	-execdir flutter pub outdated \; \
-    	-execdir flutter packages upgrade --major-versions \;
+    	-execdir flutter pub upgrade --dry-run \;
 
 # Runs `flutter clean` in all the project packages.
 clean_all:
