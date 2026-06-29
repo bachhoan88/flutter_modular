@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,93 +10,73 @@ part of 'genre.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-Genre _$GenreFromJson(Map<String, dynamic> json) {
-  return _Genre.fromJson(json);
-}
 
 /// @nodoc
 mixin _$Genre {
-  int? get id => throw _privateConstructorUsedError;
-  String? get name => throw _privateConstructorUsedError;
+  int? get id;
+  String? get name;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $GenreCopyWith<Genre> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $GenreCopyWith<$Res> {
-  factory $GenreCopyWith(Genre value, $Res Function(Genre) then) =
-      _$GenreCopyWithImpl<$Res, Genre>;
-  @useResult
-  $Res call({int? id, String? name});
-}
-
-/// @nodoc
-class _$GenreCopyWithImpl<$Res, $Val extends Genre>
-    implements $GenreCopyWith<$Res> {
-  _$GenreCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of Genre
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $GenreCopyWith<Genre> get copyWith =>
+      _$GenreCopyWithImpl<Genre>(this as Genre, _$identity);
+
+  /// Serializes this Genre to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Genre &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, id, name);
+
+  @override
+  String toString() {
+    return 'Genre(id: $id, name: $name)';
   }
 }
 
 /// @nodoc
-abstract class _$$GenreImplCopyWith<$Res> implements $GenreCopyWith<$Res> {
-  factory _$$GenreImplCopyWith(
-          _$GenreImpl value, $Res Function(_$GenreImpl) then) =
-      __$$GenreImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $GenreCopyWith<$Res> {
+  factory $GenreCopyWith(Genre value, $Res Function(Genre) _then) =
+      _$GenreCopyWithImpl;
   @useResult
   $Res call({int? id, String? name});
 }
 
 /// @nodoc
-class __$$GenreImplCopyWithImpl<$Res>
-    extends _$GenreCopyWithImpl<$Res, _$GenreImpl>
-    implements _$$GenreImplCopyWith<$Res> {
-  __$$GenreImplCopyWithImpl(
-      _$GenreImpl _value, $Res Function(_$GenreImpl) _then)
-      : super(_value, _then);
+class _$GenreCopyWithImpl<$Res> implements $GenreCopyWith<$Res> {
+  _$GenreCopyWithImpl(this._self, this._then);
 
+  final Genre _self;
+  final $Res Function(Genre) _then;
+
+  /// Create a copy of Genre
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? name = freezed,
   }) {
-    return _then(_$GenreImpl(
+    return _then(_self.copyWith(
       id: freezed == id
-          ? _value.id
+          ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
       name: freezed == name
-          ? _value.name
+          ? _self.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
@@ -104,60 +85,84 @@ class __$$GenreImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$GenreImpl implements _Genre {
-  const _$GenreImpl({this.id, this.name});
-
-  factory _$GenreImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GenreImplFromJson(json);
+class _Genre extends Genre {
+  const _Genre({this.id, this.name}) : super._();
+  factory _Genre.fromJson(Map<String, dynamic> json) => _$GenreFromJson(json);
 
   @override
   final int? id;
   @override
   final String? name;
 
+  /// Create a copy of Genre
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'Genre(id: $id, name: $name)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$GenreCopyWith<_Genre> get copyWith =>
+      __$GenreCopyWithImpl<_Genre>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$GenreToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GenreImpl &&
+            other is _Genre &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, name);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$GenreImplCopyWith<_$GenreImpl> get copyWith =>
-      __$$GenreImplCopyWithImpl<_$GenreImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$GenreImplToJson(
-      this,
-    );
+  String toString() {
+    return 'Genre(id: $id, name: $name)';
   }
 }
 
-abstract class _Genre implements Genre {
-  const factory _Genre({final int? id, final String? name}) = _$GenreImpl;
-
-  factory _Genre.fromJson(Map<String, dynamic> json) = _$GenreImpl.fromJson;
-
+/// @nodoc
+abstract mixin class _$GenreCopyWith<$Res> implements $GenreCopyWith<$Res> {
+  factory _$GenreCopyWith(_Genre value, $Res Function(_Genre) _then) =
+      __$GenreCopyWithImpl;
   @override
-  int? get id;
-  @override
-  String? get name;
-  @override
-  @JsonKey(ignore: true)
-  _$$GenreImplCopyWith<_$GenreImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @useResult
+  $Res call({int? id, String? name});
 }
+
+/// @nodoc
+class __$GenreCopyWithImpl<$Res> implements _$GenreCopyWith<$Res> {
+  __$GenreCopyWithImpl(this._self, this._then);
+
+  final _Genre _self;
+  final $Res Function(_Genre) _then;
+
+  /// Create a copy of Genre
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? id = freezed,
+    Object? name = freezed,
+  }) {
+    return _then(_Genre(
+      id: freezed == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      name: freezed == name
+          ? _self.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+// dart format on

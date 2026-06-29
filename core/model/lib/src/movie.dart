@@ -5,7 +5,9 @@ part 'movie.freezed.dart';
 part 'movie.g.dart';
 
 @freezed
-class Movie with _$Movie, BaseModel {
+abstract class Movie with _$Movie, BaseModel {
+  const Movie._();
+
   const factory Movie({
     int? id,
     @JsonKey(name: 'vote_count') int? voteCount,

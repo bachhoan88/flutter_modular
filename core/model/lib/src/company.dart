@@ -5,7 +5,9 @@ part 'company.g.dart';
 part 'company.freezed.dart';
 
 @freezed
-class Company with _$Company, BaseModel {
+abstract class Company with _$Company, BaseModel {
+  const Company._();
+
   const factory Company({
     int? id,
     @JsonKey(name: 'logo_path')

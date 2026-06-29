@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,65 +10,143 @@ part of 'movie_info.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-MovieInfo _$MovieInfoFromJson(Map<String, dynamic> json) {
-  return _MovieInfo.fromJson(json);
-}
 
 /// @nodoc
 mixin _$MovieInfo {
-  bool? get adult => throw _privateConstructorUsedError;
+  bool? get adult;
   @JsonKey(name: 'backdrop_path')
-  String? get backdropPath => throw _privateConstructorUsedError;
+  String? get backdropPath;
   @JsonKey(name: 'belongs_to_collection')
-  Collection? get collection => throw _privateConstructorUsedError;
-  int? get budget => throw _privateConstructorUsedError;
-  List<Genre>? get genres => throw _privateConstructorUsedError;
-  String? get homepage => throw _privateConstructorUsedError;
-  int? get id => throw _privateConstructorUsedError;
+  Collection? get collection;
+  int? get budget;
+  List<Genre>? get genres;
+  String? get homepage;
+  int? get id;
   @JsonKey(name: 'imdb_id')
-  String? get imdbId => throw _privateConstructorUsedError;
+  String? get imdbId;
   @JsonKey(name: 'original_language')
-  String? get originalLanguage => throw _privateConstructorUsedError;
+  String? get originalLanguage;
   @JsonKey(name: 'original_title')
-  String? get originalTitle => throw _privateConstructorUsedError;
-  String? get overview => throw _privateConstructorUsedError;
-  double? get popularity => throw _privateConstructorUsedError;
+  String? get originalTitle;
+  String? get overview;
+  double? get popularity;
   @JsonKey(name: 'poster_path')
-  String? get posterPath => throw _privateConstructorUsedError;
+  String? get posterPath;
   @JsonKey(name: 'release_date')
-  String? get releaseDate => throw _privateConstructorUsedError;
-  int? get revenue => throw _privateConstructorUsedError;
-  int? get runtime => throw _privateConstructorUsedError;
-  String? get status => throw _privateConstructorUsedError;
-  String? get tagline => throw _privateConstructorUsedError;
-  String? get title => throw _privateConstructorUsedError;
-  bool? get video => throw _privateConstructorUsedError;
+  String? get releaseDate;
+  int? get revenue;
+  int? get runtime;
+  String? get status;
+  String? get tagline;
+  String? get title;
+  bool? get video;
   @JsonKey(name: 'vote_average')
-  double? get voteAverage => throw _privateConstructorUsedError;
+  double? get voteAverage;
   @JsonKey(name: 'vote_count')
-  int? get voteCount => throw _privateConstructorUsedError;
+  int? get voteCount;
   @JsonKey(name: 'production_companies')
-  List<Company>? get companies => throw _privateConstructorUsedError;
+  List<Company>? get companies;
   @JsonKey(name: 'production_countries')
-  List<Country>? get countries => throw _privateConstructorUsedError;
+  List<Country>? get countries;
   @JsonKey(name: 'spoken_languages')
-  List<Language>? get languages => throw _privateConstructorUsedError;
+  List<Language>? get languages;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+  /// Create a copy of MovieInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
   $MovieInfoCopyWith<MovieInfo> get copyWith =>
-      throw _privateConstructorUsedError;
+      _$MovieInfoCopyWithImpl<MovieInfo>(this as MovieInfo, _$identity);
+
+  /// Serializes this MovieInfo to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is MovieInfo &&
+            (identical(other.adult, adult) || other.adult == adult) &&
+            (identical(other.backdropPath, backdropPath) ||
+                other.backdropPath == backdropPath) &&
+            (identical(other.collection, collection) ||
+                other.collection == collection) &&
+            (identical(other.budget, budget) || other.budget == budget) &&
+            const DeepCollectionEquality().equals(other.genres, genres) &&
+            (identical(other.homepage, homepage) ||
+                other.homepage == homepage) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.imdbId, imdbId) || other.imdbId == imdbId) &&
+            (identical(other.originalLanguage, originalLanguage) ||
+                other.originalLanguage == originalLanguage) &&
+            (identical(other.originalTitle, originalTitle) ||
+                other.originalTitle == originalTitle) &&
+            (identical(other.overview, overview) ||
+                other.overview == overview) &&
+            (identical(other.popularity, popularity) ||
+                other.popularity == popularity) &&
+            (identical(other.posterPath, posterPath) ||
+                other.posterPath == posterPath) &&
+            (identical(other.releaseDate, releaseDate) ||
+                other.releaseDate == releaseDate) &&
+            (identical(other.revenue, revenue) || other.revenue == revenue) &&
+            (identical(other.runtime, runtime) || other.runtime == runtime) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.tagline, tagline) || other.tagline == tagline) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.video, video) || other.video == video) &&
+            (identical(other.voteAverage, voteAverage) ||
+                other.voteAverage == voteAverage) &&
+            (identical(other.voteCount, voteCount) ||
+                other.voteCount == voteCount) &&
+            const DeepCollectionEquality().equals(other.companies, companies) &&
+            const DeepCollectionEquality().equals(other.countries, countries) &&
+            const DeepCollectionEquality().equals(other.languages, languages));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        adult,
+        backdropPath,
+        collection,
+        budget,
+        const DeepCollectionEquality().hash(genres),
+        homepage,
+        id,
+        imdbId,
+        originalLanguage,
+        originalTitle,
+        overview,
+        popularity,
+        posterPath,
+        releaseDate,
+        revenue,
+        runtime,
+        status,
+        tagline,
+        title,
+        video,
+        voteAverage,
+        voteCount,
+        const DeepCollectionEquality().hash(companies),
+        const DeepCollectionEquality().hash(countries),
+        const DeepCollectionEquality().hash(languages)
+      ]);
+
+  @override
+  String toString() {
+    return 'MovieInfo(adult: $adult, backdropPath: $backdropPath, collection: $collection, budget: $budget, genres: $genres, homepage: $homepage, id: $id, imdbId: $imdbId, originalLanguage: $originalLanguage, originalTitle: $originalTitle, overview: $overview, popularity: $popularity, posterPath: $posterPath, releaseDate: $releaseDate, revenue: $revenue, runtime: $runtime, status: $status, tagline: $tagline, title: $title, video: $video, voteAverage: $voteAverage, voteCount: $voteCount, companies: $companies, countries: $countries, languages: $languages)';
+  }
 }
 
 /// @nodoc
-abstract class $MovieInfoCopyWith<$Res> {
-  factory $MovieInfoCopyWith(MovieInfo value, $Res Function(MovieInfo) then) =
-      _$MovieInfoCopyWithImpl<$Res, MovieInfo>;
+abstract mixin class $MovieInfoCopyWith<$Res> {
+  factory $MovieInfoCopyWith(MovieInfo value, $Res Function(MovieInfo) _then) =
+      _$MovieInfoCopyWithImpl;
   @useResult
   $Res call(
       {bool? adult,
@@ -100,15 +179,14 @@ abstract class $MovieInfoCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MovieInfoCopyWithImpl<$Res, $Val extends MovieInfo>
-    implements $MovieInfoCopyWith<$Res> {
-  _$MovieInfoCopyWithImpl(this._value, this._then);
+class _$MovieInfoCopyWithImpl<$Res> implements $MovieInfoCopyWith<$Res> {
+  _$MovieInfoCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final MovieInfo _self;
+  final $Res Function(MovieInfo) _then;
 
+  /// Create a copy of MovieInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,308 +216,129 @@ class _$MovieInfoCopyWithImpl<$Res, $Val extends MovieInfo>
     Object? countries = freezed,
     Object? languages = freezed,
   }) {
-    return _then(_value.copyWith(
+    return _then(_self.copyWith(
       adult: freezed == adult
-          ? _value.adult
+          ? _self.adult
           : adult // ignore: cast_nullable_to_non_nullable
               as bool?,
       backdropPath: freezed == backdropPath
-          ? _value.backdropPath
+          ? _self.backdropPath
           : backdropPath // ignore: cast_nullable_to_non_nullable
               as String?,
       collection: freezed == collection
-          ? _value.collection
+          ? _self.collection
           : collection // ignore: cast_nullable_to_non_nullable
               as Collection?,
       budget: freezed == budget
-          ? _value.budget
+          ? _self.budget
           : budget // ignore: cast_nullable_to_non_nullable
               as int?,
       genres: freezed == genres
-          ? _value.genres
+          ? _self.genres
           : genres // ignore: cast_nullable_to_non_nullable
               as List<Genre>?,
       homepage: freezed == homepage
-          ? _value.homepage
+          ? _self.homepage
           : homepage // ignore: cast_nullable_to_non_nullable
               as String?,
       id: freezed == id
-          ? _value.id
+          ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
       imdbId: freezed == imdbId
-          ? _value.imdbId
+          ? _self.imdbId
           : imdbId // ignore: cast_nullable_to_non_nullable
               as String?,
       originalLanguage: freezed == originalLanguage
-          ? _value.originalLanguage
+          ? _self.originalLanguage
           : originalLanguage // ignore: cast_nullable_to_non_nullable
               as String?,
       originalTitle: freezed == originalTitle
-          ? _value.originalTitle
+          ? _self.originalTitle
           : originalTitle // ignore: cast_nullable_to_non_nullable
               as String?,
       overview: freezed == overview
-          ? _value.overview
+          ? _self.overview
           : overview // ignore: cast_nullable_to_non_nullable
               as String?,
       popularity: freezed == popularity
-          ? _value.popularity
+          ? _self.popularity
           : popularity // ignore: cast_nullable_to_non_nullable
               as double?,
       posterPath: freezed == posterPath
-          ? _value.posterPath
+          ? _self.posterPath
           : posterPath // ignore: cast_nullable_to_non_nullable
               as String?,
       releaseDate: freezed == releaseDate
-          ? _value.releaseDate
+          ? _self.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
               as String?,
       revenue: freezed == revenue
-          ? _value.revenue
+          ? _self.revenue
           : revenue // ignore: cast_nullable_to_non_nullable
               as int?,
       runtime: freezed == runtime
-          ? _value.runtime
+          ? _self.runtime
           : runtime // ignore: cast_nullable_to_non_nullable
               as int?,
       status: freezed == status
-          ? _value.status
+          ? _self.status
           : status // ignore: cast_nullable_to_non_nullable
               as String?,
       tagline: freezed == tagline
-          ? _value.tagline
+          ? _self.tagline
           : tagline // ignore: cast_nullable_to_non_nullable
               as String?,
       title: freezed == title
-          ? _value.title
+          ? _self.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
       video: freezed == video
-          ? _value.video
+          ? _self.video
           : video // ignore: cast_nullable_to_non_nullable
               as bool?,
       voteAverage: freezed == voteAverage
-          ? _value.voteAverage
+          ? _self.voteAverage
           : voteAverage // ignore: cast_nullable_to_non_nullable
               as double?,
       voteCount: freezed == voteCount
-          ? _value.voteCount
+          ? _self.voteCount
           : voteCount // ignore: cast_nullable_to_non_nullable
               as int?,
       companies: freezed == companies
-          ? _value.companies
+          ? _self.companies
           : companies // ignore: cast_nullable_to_non_nullable
               as List<Company>?,
       countries: freezed == countries
-          ? _value.countries
+          ? _self.countries
           : countries // ignore: cast_nullable_to_non_nullable
               as List<Country>?,
       languages: freezed == languages
-          ? _value.languages
+          ? _self.languages
           : languages // ignore: cast_nullable_to_non_nullable
               as List<Language>?,
-    ) as $Val);
+    ));
   }
 
+  /// Create a copy of MovieInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CollectionCopyWith<$Res>? get collection {
-    if (_value.collection == null) {
+    if (_self.collection == null) {
       return null;
     }
 
-    return $CollectionCopyWith<$Res>(_value.collection!, (value) {
-      return _then(_value.copyWith(collection: value) as $Val);
+    return $CollectionCopyWith<$Res>(_self.collection!, (value) {
+      return _then(_self.copyWith(collection: value));
     });
   }
 }
 
 /// @nodoc
-abstract class _$$MovieInfoImplCopyWith<$Res>
-    implements $MovieInfoCopyWith<$Res> {
-  factory _$$MovieInfoImplCopyWith(
-          _$MovieInfoImpl value, $Res Function(_$MovieInfoImpl) then) =
-      __$$MovieInfoImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {bool? adult,
-      @JsonKey(name: 'backdrop_path') String? backdropPath,
-      @JsonKey(name: 'belongs_to_collection') Collection? collection,
-      int? budget,
-      List<Genre>? genres,
-      String? homepage,
-      int? id,
-      @JsonKey(name: 'imdb_id') String? imdbId,
-      @JsonKey(name: 'original_language') String? originalLanguage,
-      @JsonKey(name: 'original_title') String? originalTitle,
-      String? overview,
-      double? popularity,
-      @JsonKey(name: 'poster_path') String? posterPath,
-      @JsonKey(name: 'release_date') String? releaseDate,
-      int? revenue,
-      int? runtime,
-      String? status,
-      String? tagline,
-      String? title,
-      bool? video,
-      @JsonKey(name: 'vote_average') double? voteAverage,
-      @JsonKey(name: 'vote_count') int? voteCount,
-      @JsonKey(name: 'production_companies') List<Company>? companies,
-      @JsonKey(name: 'production_countries') List<Country>? countries,
-      @JsonKey(name: 'spoken_languages') List<Language>? languages});
-
-  @override
-  $CollectionCopyWith<$Res>? get collection;
-}
-
-/// @nodoc
-class __$$MovieInfoImplCopyWithImpl<$Res>
-    extends _$MovieInfoCopyWithImpl<$Res, _$MovieInfoImpl>
-    implements _$$MovieInfoImplCopyWith<$Res> {
-  __$$MovieInfoImplCopyWithImpl(
-      _$MovieInfoImpl _value, $Res Function(_$MovieInfoImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? adult = freezed,
-    Object? backdropPath = freezed,
-    Object? collection = freezed,
-    Object? budget = freezed,
-    Object? genres = freezed,
-    Object? homepage = freezed,
-    Object? id = freezed,
-    Object? imdbId = freezed,
-    Object? originalLanguage = freezed,
-    Object? originalTitle = freezed,
-    Object? overview = freezed,
-    Object? popularity = freezed,
-    Object? posterPath = freezed,
-    Object? releaseDate = freezed,
-    Object? revenue = freezed,
-    Object? runtime = freezed,
-    Object? status = freezed,
-    Object? tagline = freezed,
-    Object? title = freezed,
-    Object? video = freezed,
-    Object? voteAverage = freezed,
-    Object? voteCount = freezed,
-    Object? companies = freezed,
-    Object? countries = freezed,
-    Object? languages = freezed,
-  }) {
-    return _then(_$MovieInfoImpl(
-      adult: freezed == adult
-          ? _value.adult
-          : adult // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      backdropPath: freezed == backdropPath
-          ? _value.backdropPath
-          : backdropPath // ignore: cast_nullable_to_non_nullable
-              as String?,
-      collection: freezed == collection
-          ? _value.collection
-          : collection // ignore: cast_nullable_to_non_nullable
-              as Collection?,
-      budget: freezed == budget
-          ? _value.budget
-          : budget // ignore: cast_nullable_to_non_nullable
-              as int?,
-      genres: freezed == genres
-          ? _value._genres
-          : genres // ignore: cast_nullable_to_non_nullable
-              as List<Genre>?,
-      homepage: freezed == homepage
-          ? _value.homepage
-          : homepage // ignore: cast_nullable_to_non_nullable
-              as String?,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      imdbId: freezed == imdbId
-          ? _value.imdbId
-          : imdbId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      originalLanguage: freezed == originalLanguage
-          ? _value.originalLanguage
-          : originalLanguage // ignore: cast_nullable_to_non_nullable
-              as String?,
-      originalTitle: freezed == originalTitle
-          ? _value.originalTitle
-          : originalTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      overview: freezed == overview
-          ? _value.overview
-          : overview // ignore: cast_nullable_to_non_nullable
-              as String?,
-      popularity: freezed == popularity
-          ? _value.popularity
-          : popularity // ignore: cast_nullable_to_non_nullable
-              as double?,
-      posterPath: freezed == posterPath
-          ? _value.posterPath
-          : posterPath // ignore: cast_nullable_to_non_nullable
-              as String?,
-      releaseDate: freezed == releaseDate
-          ? _value.releaseDate
-          : releaseDate // ignore: cast_nullable_to_non_nullable
-              as String?,
-      revenue: freezed == revenue
-          ? _value.revenue
-          : revenue // ignore: cast_nullable_to_non_nullable
-              as int?,
-      runtime: freezed == runtime
-          ? _value.runtime
-          : runtime // ignore: cast_nullable_to_non_nullable
-              as int?,
-      status: freezed == status
-          ? _value.status
-          : status // ignore: cast_nullable_to_non_nullable
-              as String?,
-      tagline: freezed == tagline
-          ? _value.tagline
-          : tagline // ignore: cast_nullable_to_non_nullable
-              as String?,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String?,
-      video: freezed == video
-          ? _value.video
-          : video // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      voteAverage: freezed == voteAverage
-          ? _value.voteAverage
-          : voteAverage // ignore: cast_nullable_to_non_nullable
-              as double?,
-      voteCount: freezed == voteCount
-          ? _value.voteCount
-          : voteCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      companies: freezed == companies
-          ? _value._companies
-          : companies // ignore: cast_nullable_to_non_nullable
-              as List<Company>?,
-      countries: freezed == countries
-          ? _value._countries
-          : countries // ignore: cast_nullable_to_non_nullable
-              as List<Country>?,
-      languages: freezed == languages
-          ? _value._languages
-          : languages // ignore: cast_nullable_to_non_nullable
-              as List<Language>?,
-    ));
-  }
-}
-
-/// @nodoc
 @JsonSerializable()
-class _$MovieInfoImpl implements _MovieInfo {
-  const _$MovieInfoImpl(
+class _MovieInfo extends MovieInfo {
+  const _MovieInfo(
       {this.adult,
       @JsonKey(name: 'backdrop_path') this.backdropPath,
       @JsonKey(name: 'belongs_to_collection') this.collection,
@@ -468,10 +367,10 @@ class _$MovieInfoImpl implements _MovieInfo {
       : _genres = genres,
         _companies = companies,
         _countries = countries,
-        _languages = languages;
-
-  factory _$MovieInfoImpl.fromJson(Map<String, dynamic> json) =>
-      _$$MovieInfoImplFromJson(json);
+        _languages = languages,
+        super._();
+  factory _MovieInfo.fromJson(Map<String, dynamic> json) =>
+      _$MovieInfoFromJson(json);
 
   @override
   final bool? adult;
@@ -567,16 +466,26 @@ class _$MovieInfoImpl implements _MovieInfo {
     return EqualUnmodifiableListView(value);
   }
 
+  /// Create a copy of MovieInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'MovieInfo(adult: $adult, backdropPath: $backdropPath, collection: $collection, budget: $budget, genres: $genres, homepage: $homepage, id: $id, imdbId: $imdbId, originalLanguage: $originalLanguage, originalTitle: $originalTitle, overview: $overview, popularity: $popularity, posterPath: $posterPath, releaseDate: $releaseDate, revenue: $revenue, runtime: $runtime, status: $status, tagline: $tagline, title: $title, video: $video, voteAverage: $voteAverage, voteCount: $voteCount, companies: $companies, countries: $countries, languages: $languages)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$MovieInfoCopyWith<_MovieInfo> get copyWith =>
+      __$MovieInfoCopyWithImpl<_MovieInfo>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$MovieInfoToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MovieInfoImpl &&
+            other is _MovieInfo &&
             (identical(other.adult, adult) || other.adult == adult) &&
             (identical(other.backdropPath, backdropPath) ||
                 other.backdropPath == backdropPath) &&
@@ -618,7 +527,7 @@ class _$MovieInfoImpl implements _MovieInfo {
                 .equals(other._languages, _languages));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -649,116 +558,206 @@ class _$MovieInfoImpl implements _MovieInfo {
         const DeepCollectionEquality().hash(_languages)
       ]);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$MovieInfoImplCopyWith<_$MovieInfoImpl> get copyWith =>
-      __$$MovieInfoImplCopyWithImpl<_$MovieInfoImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$MovieInfoImplToJson(
-      this,
-    );
+  String toString() {
+    return 'MovieInfo(adult: $adult, backdropPath: $backdropPath, collection: $collection, budget: $budget, genres: $genres, homepage: $homepage, id: $id, imdbId: $imdbId, originalLanguage: $originalLanguage, originalTitle: $originalTitle, overview: $overview, popularity: $popularity, posterPath: $posterPath, releaseDate: $releaseDate, revenue: $revenue, runtime: $runtime, status: $status, tagline: $tagline, title: $title, video: $video, voteAverage: $voteAverage, voteCount: $voteCount, companies: $companies, countries: $countries, languages: $languages)';
   }
 }
 
-abstract class _MovieInfo implements MovieInfo {
-  const factory _MovieInfo(
-          {final bool? adult,
-          @JsonKey(name: 'backdrop_path') final String? backdropPath,
-          @JsonKey(name: 'belongs_to_collection') final Collection? collection,
-          final int? budget,
-          final List<Genre>? genres,
-          final String? homepage,
-          final int? id,
-          @JsonKey(name: 'imdb_id') final String? imdbId,
-          @JsonKey(name: 'original_language') final String? originalLanguage,
-          @JsonKey(name: 'original_title') final String? originalTitle,
-          final String? overview,
-          final double? popularity,
-          @JsonKey(name: 'poster_path') final String? posterPath,
-          @JsonKey(name: 'release_date') final String? releaseDate,
-          final int? revenue,
-          final int? runtime,
-          final String? status,
-          final String? tagline,
-          final String? title,
-          final bool? video,
-          @JsonKey(name: 'vote_average') final double? voteAverage,
-          @JsonKey(name: 'vote_count') final int? voteCount,
-          @JsonKey(name: 'production_companies') final List<Company>? companies,
-          @JsonKey(name: 'production_countries') final List<Country>? countries,
-          @JsonKey(name: 'spoken_languages') final List<Language>? languages}) =
-      _$MovieInfoImpl;
+/// @nodoc
+abstract mixin class _$MovieInfoCopyWith<$Res>
+    implements $MovieInfoCopyWith<$Res> {
+  factory _$MovieInfoCopyWith(
+          _MovieInfo value, $Res Function(_MovieInfo) _then) =
+      __$MovieInfoCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {bool? adult,
+      @JsonKey(name: 'backdrop_path') String? backdropPath,
+      @JsonKey(name: 'belongs_to_collection') Collection? collection,
+      int? budget,
+      List<Genre>? genres,
+      String? homepage,
+      int? id,
+      @JsonKey(name: 'imdb_id') String? imdbId,
+      @JsonKey(name: 'original_language') String? originalLanguage,
+      @JsonKey(name: 'original_title') String? originalTitle,
+      String? overview,
+      double? popularity,
+      @JsonKey(name: 'poster_path') String? posterPath,
+      @JsonKey(name: 'release_date') String? releaseDate,
+      int? revenue,
+      int? runtime,
+      String? status,
+      String? tagline,
+      String? title,
+      bool? video,
+      @JsonKey(name: 'vote_average') double? voteAverage,
+      @JsonKey(name: 'vote_count') int? voteCount,
+      @JsonKey(name: 'production_companies') List<Company>? companies,
+      @JsonKey(name: 'production_countries') List<Country>? countries,
+      @JsonKey(name: 'spoken_languages') List<Language>? languages});
 
-  factory _MovieInfo.fromJson(Map<String, dynamic> json) =
-      _$MovieInfoImpl.fromJson;
-
   @override
-  bool? get adult;
-  @override
-  @JsonKey(name: 'backdrop_path')
-  String? get backdropPath;
-  @override
-  @JsonKey(name: 'belongs_to_collection')
-  Collection? get collection;
-  @override
-  int? get budget;
-  @override
-  List<Genre>? get genres;
-  @override
-  String? get homepage;
-  @override
-  int? get id;
-  @override
-  @JsonKey(name: 'imdb_id')
-  String? get imdbId;
-  @override
-  @JsonKey(name: 'original_language')
-  String? get originalLanguage;
-  @override
-  @JsonKey(name: 'original_title')
-  String? get originalTitle;
-  @override
-  String? get overview;
-  @override
-  double? get popularity;
-  @override
-  @JsonKey(name: 'poster_path')
-  String? get posterPath;
-  @override
-  @JsonKey(name: 'release_date')
-  String? get releaseDate;
-  @override
-  int? get revenue;
-  @override
-  int? get runtime;
-  @override
-  String? get status;
-  @override
-  String? get tagline;
-  @override
-  String? get title;
-  @override
-  bool? get video;
-  @override
-  @JsonKey(name: 'vote_average')
-  double? get voteAverage;
-  @override
-  @JsonKey(name: 'vote_count')
-  int? get voteCount;
-  @override
-  @JsonKey(name: 'production_companies')
-  List<Company>? get companies;
-  @override
-  @JsonKey(name: 'production_countries')
-  List<Country>? get countries;
-  @override
-  @JsonKey(name: 'spoken_languages')
-  List<Language>? get languages;
-  @override
-  @JsonKey(ignore: true)
-  _$$MovieInfoImplCopyWith<_$MovieInfoImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CollectionCopyWith<$Res>? get collection;
 }
+
+/// @nodoc
+class __$MovieInfoCopyWithImpl<$Res> implements _$MovieInfoCopyWith<$Res> {
+  __$MovieInfoCopyWithImpl(this._self, this._then);
+
+  final _MovieInfo _self;
+  final $Res Function(_MovieInfo) _then;
+
+  /// Create a copy of MovieInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? adult = freezed,
+    Object? backdropPath = freezed,
+    Object? collection = freezed,
+    Object? budget = freezed,
+    Object? genres = freezed,
+    Object? homepage = freezed,
+    Object? id = freezed,
+    Object? imdbId = freezed,
+    Object? originalLanguage = freezed,
+    Object? originalTitle = freezed,
+    Object? overview = freezed,
+    Object? popularity = freezed,
+    Object? posterPath = freezed,
+    Object? releaseDate = freezed,
+    Object? revenue = freezed,
+    Object? runtime = freezed,
+    Object? status = freezed,
+    Object? tagline = freezed,
+    Object? title = freezed,
+    Object? video = freezed,
+    Object? voteAverage = freezed,
+    Object? voteCount = freezed,
+    Object? companies = freezed,
+    Object? countries = freezed,
+    Object? languages = freezed,
+  }) {
+    return _then(_MovieInfo(
+      adult: freezed == adult
+          ? _self.adult
+          : adult // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      backdropPath: freezed == backdropPath
+          ? _self.backdropPath
+          : backdropPath // ignore: cast_nullable_to_non_nullable
+              as String?,
+      collection: freezed == collection
+          ? _self.collection
+          : collection // ignore: cast_nullable_to_non_nullable
+              as Collection?,
+      budget: freezed == budget
+          ? _self.budget
+          : budget // ignore: cast_nullable_to_non_nullable
+              as int?,
+      genres: freezed == genres
+          ? _self._genres
+          : genres // ignore: cast_nullable_to_non_nullable
+              as List<Genre>?,
+      homepage: freezed == homepage
+          ? _self.homepage
+          : homepage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      id: freezed == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      imdbId: freezed == imdbId
+          ? _self.imdbId
+          : imdbId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      originalLanguage: freezed == originalLanguage
+          ? _self.originalLanguage
+          : originalLanguage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      originalTitle: freezed == originalTitle
+          ? _self.originalTitle
+          : originalTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
+      overview: freezed == overview
+          ? _self.overview
+          : overview // ignore: cast_nullable_to_non_nullable
+              as String?,
+      popularity: freezed == popularity
+          ? _self.popularity
+          : popularity // ignore: cast_nullable_to_non_nullable
+              as double?,
+      posterPath: freezed == posterPath
+          ? _self.posterPath
+          : posterPath // ignore: cast_nullable_to_non_nullable
+              as String?,
+      releaseDate: freezed == releaseDate
+          ? _self.releaseDate
+          : releaseDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      revenue: freezed == revenue
+          ? _self.revenue
+          : revenue // ignore: cast_nullable_to_non_nullable
+              as int?,
+      runtime: freezed == runtime
+          ? _self.runtime
+          : runtime // ignore: cast_nullable_to_non_nullable
+              as int?,
+      status: freezed == status
+          ? _self.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String?,
+      tagline: freezed == tagline
+          ? _self.tagline
+          : tagline // ignore: cast_nullable_to_non_nullable
+              as String?,
+      title: freezed == title
+          ? _self.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      video: freezed == video
+          ? _self.video
+          : video // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      voteAverage: freezed == voteAverage
+          ? _self.voteAverage
+          : voteAverage // ignore: cast_nullable_to_non_nullable
+              as double?,
+      voteCount: freezed == voteCount
+          ? _self.voteCount
+          : voteCount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      companies: freezed == companies
+          ? _self._companies
+          : companies // ignore: cast_nullable_to_non_nullable
+              as List<Company>?,
+      countries: freezed == countries
+          ? _self._countries
+          : countries // ignore: cast_nullable_to_non_nullable
+              as List<Country>?,
+      languages: freezed == languages
+          ? _self._languages
+          : languages // ignore: cast_nullable_to_non_nullable
+              as List<Language>?,
+    ));
+  }
+
+  /// Create a copy of MovieInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CollectionCopyWith<$Res>? get collection {
+    if (_self.collection == null) {
+      return null;
+    }
+
+    return $CollectionCopyWith<$Res>(_self.collection!, (value) {
+      return _then(_self.copyWith(collection: value));
+    });
+  }
+}
+
+// dart format on

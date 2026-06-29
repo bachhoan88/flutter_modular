@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,94 +10,74 @@ part of 'country.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-Country _$CountryFromJson(Map<String, dynamic> json) {
-  return _Country.fromJson(json);
-}
 
 /// @nodoc
 mixin _$Country {
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @JsonKey(name: 'iso_3166_1')
-  String? get code => throw _privateConstructorUsedError;
+  String? get code;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $CountryCopyWith<Country> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $CountryCopyWith<$Res> {
-  factory $CountryCopyWith(Country value, $Res Function(Country) then) =
-      _$CountryCopyWithImpl<$Res, Country>;
-  @useResult
-  $Res call({String? name, @JsonKey(name: 'iso_3166_1') String? code});
-}
-
-/// @nodoc
-class _$CountryCopyWithImpl<$Res, $Val extends Country>
-    implements $CountryCopyWith<$Res> {
-  _$CountryCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of Country
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $CountryCopyWith<Country> get copyWith =>
+      _$CountryCopyWithImpl<Country>(this as Country, _$identity);
+
+  /// Serializes this Country to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? name = freezed,
-    Object? code = freezed,
-  }) {
-    return _then(_value.copyWith(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      code: freezed == code
-          ? _value.code
-          : code // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Country &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.code, code) || other.code == code));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, code);
+
+  @override
+  String toString() {
+    return 'Country(name: $name, code: $code)';
   }
 }
 
 /// @nodoc
-abstract class _$$CountryImplCopyWith<$Res> implements $CountryCopyWith<$Res> {
-  factory _$$CountryImplCopyWith(
-          _$CountryImpl value, $Res Function(_$CountryImpl) then) =
-      __$$CountryImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $CountryCopyWith<$Res> {
+  factory $CountryCopyWith(Country value, $Res Function(Country) _then) =
+      _$CountryCopyWithImpl;
   @useResult
   $Res call({String? name, @JsonKey(name: 'iso_3166_1') String? code});
 }
 
 /// @nodoc
-class __$$CountryImplCopyWithImpl<$Res>
-    extends _$CountryCopyWithImpl<$Res, _$CountryImpl>
-    implements _$$CountryImplCopyWith<$Res> {
-  __$$CountryImplCopyWithImpl(
-      _$CountryImpl _value, $Res Function(_$CountryImpl) _then)
-      : super(_value, _then);
+class _$CountryCopyWithImpl<$Res> implements $CountryCopyWith<$Res> {
+  _$CountryCopyWithImpl(this._self, this._then);
 
+  final Country _self;
+  final $Res Function(Country) _then;
+
+  /// Create a copy of Country
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? name = freezed,
     Object? code = freezed,
   }) {
-    return _then(_$CountryImpl(
+    return _then(_self.copyWith(
       name: freezed == name
-          ? _value.name
+          ? _self.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
       code: freezed == code
-          ? _value.code
+          ? _self.code
           : code // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
@@ -105,11 +86,11 @@ class __$$CountryImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$CountryImpl implements _Country {
-  const _$CountryImpl({this.name, @JsonKey(name: 'iso_3166_1') this.code});
-
-  factory _$CountryImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CountryImplFromJson(json);
+class _Country extends Country {
+  const _Country({this.name, @JsonKey(name: 'iso_3166_1') this.code})
+      : super._();
+  factory _Country.fromJson(Map<String, dynamic> json) =>
+      _$CountryFromJson(json);
 
   @override
   final String? name;
@@ -117,52 +98,75 @@ class _$CountryImpl implements _Country {
   @JsonKey(name: 'iso_3166_1')
   final String? code;
 
+  /// Create a copy of Country
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'Country(name: $name, code: $code)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$CountryCopyWith<_Country> get copyWith =>
+      __$CountryCopyWithImpl<_Country>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$CountryToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CountryImpl &&
+            other is _Country &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.code, code) || other.code == code));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, code);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$CountryImplCopyWith<_$CountryImpl> get copyWith =>
-      __$$CountryImplCopyWithImpl<_$CountryImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$CountryImplToJson(
-      this,
-    );
+  String toString() {
+    return 'Country(name: $name, code: $code)';
   }
 }
 
-abstract class _Country implements Country {
-  const factory _Country(
-      {final String? name,
-      @JsonKey(name: 'iso_3166_1') final String? code}) = _$CountryImpl;
-
-  factory _Country.fromJson(Map<String, dynamic> json) = _$CountryImpl.fromJson;
-
+/// @nodoc
+abstract mixin class _$CountryCopyWith<$Res> implements $CountryCopyWith<$Res> {
+  factory _$CountryCopyWith(_Country value, $Res Function(_Country) _then) =
+      __$CountryCopyWithImpl;
   @override
-  String? get name;
-  @override
-  @JsonKey(name: 'iso_3166_1')
-  String? get code;
-  @override
-  @JsonKey(ignore: true)
-  _$$CountryImplCopyWith<_$CountryImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @useResult
+  $Res call({String? name, @JsonKey(name: 'iso_3166_1') String? code});
 }
+
+/// @nodoc
+class __$CountryCopyWithImpl<$Res> implements _$CountryCopyWith<$Res> {
+  __$CountryCopyWithImpl(this._self, this._then);
+
+  final _Country _self;
+  final $Res Function(_Country) _then;
+
+  /// Create a copy of Country
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? name = freezed,
+    Object? code = freezed,
+  }) {
+    return _then(_Country(
+      name: freezed == name
+          ? _self.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      code: freezed == code
+          ? _self.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+// dart format on

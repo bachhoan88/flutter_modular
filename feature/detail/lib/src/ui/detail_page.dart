@@ -129,9 +129,9 @@ class DetailPage extends ConsumerWidget {
               end: Alignment.bottomCenter,
               stops: List.of([0.0, 0.5, 0.7, 0.9]),
               colors: [
-                Colors.white.withOpacity(0.2),
-                Colors.white.withOpacity(0.1),
-                Colors.white.withOpacity(0.05),
+                Colors.white.withValues(alpha: 0.2),
+                Colors.white.withValues(alpha: 0.1),
+                Colors.white.withValues(alpha: 0.05),
                 Colors.transparent,
               ],
             ),

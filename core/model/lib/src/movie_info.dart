@@ -6,7 +6,9 @@ part 'movie_info.freezed.dart';
 part 'movie_info.g.dart';
 
 @freezed
-class MovieInfo with _$MovieInfo, BaseModel {
+abstract class MovieInfo with _$MovieInfo, BaseModel {
+  const MovieInfo._();
+
   const factory MovieInfo({
     bool? adult,
     @JsonKey(name: 'backdrop_path') String? backdropPath,

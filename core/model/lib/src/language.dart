@@ -5,7 +5,9 @@ part 'language.g.dart';
 part 'language.freezed.dart';
 
 @freezed
-class Language with _$Language, BaseModel {
+abstract class Language with _$Language, BaseModel {
+  const Language._();
+
   const factory Language({
     String? name,
     @JsonKey(name: 'english_name')

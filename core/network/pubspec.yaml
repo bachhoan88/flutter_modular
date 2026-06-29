@@ -5,32 +5,32 @@ version: 1.0.0+1
 publish_to: none
 
 environment:
-  sdk: '>=3.2.3 <4.0.0'
+  sdk: '>=3.5.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
 
-  freezed_annotation: ^2.4.1
+  freezed_annotation: ^3.0.0
   json_annotation: ^4.8.1
   flutter_gen_runner: ^5.4.0
   dio: ^5.4.0
   retrofit: ^4.0.3
   package_info_plus: ^8.0.0
-  retrofit_generator: ^8.0.6
+  retrofit_generator: ^9.1.9
   equatable: ^2.0.5
   core_common:
     path: ../common
   core_model:
     path: ../model
-  riverpod: ^2.4.9
+  riverpod: ^2.6.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
+  flutter_lints: ^5.0.0
   build_runner: ^2.4.8
-  freezed: ^2.4.6
+  freezed: '>=3.1.0 <3.2.0'
   json_serializable: ^6.7.1
   mockito: ^5.4.4
 

@@ -5,7 +5,7 @@ part 'movie_response.freezed.dart';
 part 'movie_response.g.dart';
 
 @freezed
-class MovieResponse with _$MovieResponse {
+abstract class MovieResponse with _$MovieResponse {
   const factory MovieResponse({
     int? page,
     @JsonKey(name: 'results') List<Movie>? movies,

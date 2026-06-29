@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,190 +10,27 @@ part of 'base_ui_state.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$UiState<T> {
-  bool get isLoading => throw _privateConstructorUsedError;
-  SingleObserver<Exception>? get exception =>
-      throw _privateConstructorUsedError;
-  T? get data => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            bool isLoading, SingleObserver<Exception>? exception, T? data)
-        loading,
-    required TResult Function(
-            SingleObserver<Exception> exception, bool isLoading, T? data)
-        exception,
-    required TResult Function(
-            T data, bool isLoading, SingleObserver<Exception>? exception)
-        success,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            bool isLoading, SingleObserver<Exception>? exception, T? data)?
-        loading,
-    TResult? Function(
-            SingleObserver<Exception> exception, bool isLoading, T? data)?
-        exception,
-    TResult? Function(
-            T data, bool isLoading, SingleObserver<Exception>? exception)?
-        success,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            bool isLoading, SingleObserver<Exception>? exception, T? data)?
-        loading,
-    TResult Function(
-            SingleObserver<Exception> exception, bool isLoading, T? data)?
-        exception,
-    TResult Function(
-            T data, bool isLoading, SingleObserver<Exception>? exception)?
-        success,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(UiStateLoading<T> value) loading,
-    required TResult Function(UiStateException<T> value) exception,
-    required TResult Function(UiStateSuccess<T> value) success,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(UiStateLoading<T> value)? loading,
-    TResult? Function(UiStateException<T> value)? exception,
-    TResult? Function(UiStateSuccess<T> value)? success,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(UiStateLoading<T> value)? loading,
-    TResult Function(UiStateException<T> value)? exception,
-    TResult Function(UiStateSuccess<T> value)? success,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  bool get isLoading;
+  SingleObserver<Exception>? get exception;
+  T? get data;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UiState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
   $UiStateCopyWith<T, UiState<T>> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $UiStateCopyWith<T, $Res> {
-  factory $UiStateCopyWith(UiState<T> value, $Res Function(UiState<T>) then) =
-      _$UiStateCopyWithImpl<T, $Res, UiState<T>>;
-  @useResult
-  $Res call({bool isLoading, SingleObserver<Exception> exception});
-}
-
-/// @nodoc
-class _$UiStateCopyWithImpl<T, $Res, $Val extends UiState<T>>
-    implements $UiStateCopyWith<T, $Res> {
-  _$UiStateCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? isLoading = null,
-    Object? exception = null,
-  }) {
-    return _then(_value.copyWith(
-      isLoading: null == isLoading
-          ? _value.isLoading
-          : isLoading // ignore: cast_nullable_to_non_nullable
-              as bool,
-      exception: null == exception
-          ? _value.exception!
-          : exception // ignore: cast_nullable_to_non_nullable
-              as SingleObserver<Exception>,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$UiStateLoadingImplCopyWith<T, $Res>
-    implements $UiStateCopyWith<T, $Res> {
-  factory _$$UiStateLoadingImplCopyWith(_$UiStateLoadingImpl<T> value,
-          $Res Function(_$UiStateLoadingImpl<T>) then) =
-      __$$UiStateLoadingImplCopyWithImpl<T, $Res>;
-  @override
-  @useResult
-  $Res call({bool isLoading, SingleObserver<Exception>? exception, T? data});
-}
-
-/// @nodoc
-class __$$UiStateLoadingImplCopyWithImpl<T, $Res>
-    extends _$UiStateCopyWithImpl<T, $Res, _$UiStateLoadingImpl<T>>
-    implements _$$UiStateLoadingImplCopyWith<T, $Res> {
-  __$$UiStateLoadingImplCopyWithImpl(_$UiStateLoadingImpl<T> _value,
-      $Res Function(_$UiStateLoadingImpl<T>) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? isLoading = null,
-    Object? exception = freezed,
-    Object? data = freezed,
-  }) {
-    return _then(_$UiStateLoadingImpl<T>(
-      null == isLoading
-          ? _value.isLoading
-          : isLoading // ignore: cast_nullable_to_non_nullable
-              as bool,
-      exception: freezed == exception
-          ? _value.exception
-          : exception // ignore: cast_nullable_to_non_nullable
-              as SingleObserver<Exception>?,
-      data: freezed == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as T?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$UiStateLoadingImpl<T> implements UiStateLoading<T> {
-  const _$UiStateLoadingImpl(this.isLoading,
-      {this.exception = null, this.data = null});
-
-  @override
-  final bool isLoading;
-  @override
-  @JsonKey()
-  final SingleObserver<Exception>? exception;
-  @override
-  @JsonKey()
-  final T? data;
-
-  @override
-  String toString() {
-    return 'UiState<$T>.loading(isLoading: $isLoading, exception: $exception, data: $data)';
-  }
+      _$UiStateCopyWithImpl<T, UiState<T>>(this as UiState<T>, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$UiStateLoadingImpl<T> &&
+            other is UiState<T> &&
             (identical(other.isLoading, isLoading) ||
                 other.isLoading == isLoading) &&
             (identical(other.exception, exception) ||
@@ -204,154 +42,132 @@ class _$UiStateLoadingImpl<T> implements UiStateLoading<T> {
   int get hashCode => Object.hash(runtimeType, isLoading, exception,
       const DeepCollectionEquality().hash(data));
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$UiStateLoadingImplCopyWith<T, _$UiStateLoadingImpl<T>> get copyWith =>
-      __$$UiStateLoadingImplCopyWithImpl<T, _$UiStateLoadingImpl<T>>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            bool isLoading, SingleObserver<Exception>? exception, T? data)
-        loading,
-    required TResult Function(
-            SingleObserver<Exception> exception, bool isLoading, T? data)
-        exception,
-    required TResult Function(
-            T data, bool isLoading, SingleObserver<Exception>? exception)
-        success,
-  }) {
-    return loading(isLoading, this.exception, data);
+  String toString() {
+    return 'UiState<$T>(isLoading: $isLoading, exception: $exception, data: $data)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            bool isLoading, SingleObserver<Exception>? exception, T? data)?
-        loading,
-    TResult? Function(
-            SingleObserver<Exception> exception, bool isLoading, T? data)?
-        exception,
-    TResult? Function(
-            T data, bool isLoading, SingleObserver<Exception>? exception)?
-        success,
-  }) {
-    return loading?.call(isLoading, this.exception, data);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            bool isLoading, SingleObserver<Exception>? exception, T? data)?
-        loading,
-    TResult Function(
-            SingleObserver<Exception> exception, bool isLoading, T? data)?
-        exception,
-    TResult Function(
-            T data, bool isLoading, SingleObserver<Exception>? exception)?
-        success,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading(isLoading, this.exception, data);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(UiStateLoading<T> value) loading,
-    required TResult Function(UiStateException<T> value) exception,
-    required TResult Function(UiStateSuccess<T> value) success,
-  }) {
-    return loading(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(UiStateLoading<T> value)? loading,
-    TResult? Function(UiStateException<T> value)? exception,
-    TResult? Function(UiStateSuccess<T> value)? success,
-  }) {
-    return loading?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(UiStateLoading<T> value)? loading,
-    TResult Function(UiStateException<T> value)? exception,
-    TResult Function(UiStateSuccess<T> value)? success,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class UiStateLoading<T> implements UiState<T> {
-  const factory UiStateLoading(final bool isLoading,
-      {final SingleObserver<Exception>? exception,
-      final T? data}) = _$UiStateLoadingImpl<T>;
-
-  @override
-  bool get isLoading;
-  @override
-  SingleObserver<Exception>? get exception;
-  @override
-  T? get data;
-  @override
-  @JsonKey(ignore: true)
-  _$$UiStateLoadingImplCopyWith<T, _$UiStateLoadingImpl<T>> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$UiStateExceptionImplCopyWith<T, $Res>
-    implements $UiStateCopyWith<T, $Res> {
-  factory _$$UiStateExceptionImplCopyWith(_$UiStateExceptionImpl<T> value,
-          $Res Function(_$UiStateExceptionImpl<T>) then) =
-      __$$UiStateExceptionImplCopyWithImpl<T, $Res>;
-  @override
+abstract mixin class $UiStateCopyWith<T, $Res> {
+  factory $UiStateCopyWith(UiState<T> value, $Res Function(UiState<T>) _then) =
+      _$UiStateCopyWithImpl;
   @useResult
-  $Res call({SingleObserver<Exception> exception, bool isLoading, T? data});
+  $Res call({bool isLoading, SingleObserver<Exception> exception});
 }
 
 /// @nodoc
-class __$$UiStateExceptionImplCopyWithImpl<T, $Res>
-    extends _$UiStateCopyWithImpl<T, $Res, _$UiStateExceptionImpl<T>>
-    implements _$$UiStateExceptionImplCopyWith<T, $Res> {
-  __$$UiStateExceptionImplCopyWithImpl(_$UiStateExceptionImpl<T> _value,
-      $Res Function(_$UiStateExceptionImpl<T>) _then)
-      : super(_value, _then);
+class _$UiStateCopyWithImpl<T, $Res> implements $UiStateCopyWith<T, $Res> {
+  _$UiStateCopyWithImpl(this._self, this._then);
 
+  final UiState<T> _self;
+  final $Res Function(UiState<T>) _then;
+
+  /// Create a copy of UiState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? exception = null,
     Object? isLoading = null,
-    Object? data = freezed,
+    Object? exception = null,
   }) {
-    return _then(_$UiStateExceptionImpl<T>(
-      null == exception
-          ? _value.exception
-          : exception // ignore: cast_nullable_to_non_nullable
-              as SingleObserver<Exception>,
+    return _then(_self.copyWith(
       isLoading: null == isLoading
-          ? _value.isLoading
+          ? _self.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
+      exception: null == exception
+          ? _self.exception!
+          : exception // ignore: cast_nullable_to_non_nullable
+              as SingleObserver<Exception>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class UiStateLoading<T> implements UiState<T> {
+  const UiStateLoading(this.isLoading,
+      {this.exception = null, this.data = null});
+
+  @override
+  final bool isLoading;
+  @override
+  @JsonKey()
+  final SingleObserver<Exception>? exception;
+  @override
+  @JsonKey()
+  final T? data;
+
+  /// Create a copy of UiState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $UiStateLoadingCopyWith<T, UiStateLoading<T>> get copyWith =>
+      _$UiStateLoadingCopyWithImpl<T, UiStateLoading<T>>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is UiStateLoading<T> &&
+            (identical(other.isLoading, isLoading) ||
+                other.isLoading == isLoading) &&
+            (identical(other.exception, exception) ||
+                other.exception == exception) &&
+            const DeepCollectionEquality().equals(other.data, data));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, isLoading, exception,
+      const DeepCollectionEquality().hash(data));
+
+  @override
+  String toString() {
+    return 'UiState<$T>.loading(isLoading: $isLoading, exception: $exception, data: $data)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $UiStateLoadingCopyWith<T, $Res>
+    implements $UiStateCopyWith<T, $Res> {
+  factory $UiStateLoadingCopyWith(
+          UiStateLoading<T> value, $Res Function(UiStateLoading<T>) _then) =
+      _$UiStateLoadingCopyWithImpl;
+  @override
+  @useResult
+  $Res call({bool isLoading, SingleObserver<Exception>? exception, T? data});
+}
+
+/// @nodoc
+class _$UiStateLoadingCopyWithImpl<T, $Res>
+    implements $UiStateLoadingCopyWith<T, $Res> {
+  _$UiStateLoadingCopyWithImpl(this._self, this._then);
+
+  final UiStateLoading<T> _self;
+  final $Res Function(UiStateLoading<T>) _then;
+
+  /// Create a copy of UiState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? isLoading = null,
+    Object? exception = freezed,
+    Object? data = freezed,
+  }) {
+    return _then(UiStateLoading<T>(
+      null == isLoading
+          ? _self.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      exception: freezed == exception
+          ? _self.exception
+          : exception // ignore: cast_nullable_to_non_nullable
+              as SingleObserver<Exception>?,
       data: freezed == data
-          ? _value.data
+          ? _self.data
           : data // ignore: cast_nullable_to_non_nullable
               as T?,
     ));
@@ -360,8 +176,8 @@ class __$$UiStateExceptionImplCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$UiStateExceptionImpl<T> implements UiStateException<T> {
-  const _$UiStateExceptionImpl(this.exception,
+class UiStateException<T> implements UiState<T> {
+  const UiStateException(this.exception,
       {this.isLoading = false, this.data = null});
 
   @override
@@ -373,16 +189,19 @@ class _$UiStateExceptionImpl<T> implements UiStateException<T> {
   @JsonKey()
   final T? data;
 
+  /// Create a copy of UiState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'UiState<$T>.exception(exception: $exception, isLoading: $isLoading, data: $data)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $UiStateExceptionCopyWith<T, UiStateException<T>> get copyWith =>
+      _$UiStateExceptionCopyWithImpl<T, UiStateException<T>>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$UiStateExceptionImpl<T> &&
+            other is UiStateException<T> &&
             (identical(other.exception, exception) ||
                 other.exception == exception) &&
             (identical(other.isLoading, isLoading) ||
@@ -394,163 +213,61 @@ class _$UiStateExceptionImpl<T> implements UiStateException<T> {
   int get hashCode => Object.hash(runtimeType, exception, isLoading,
       const DeepCollectionEquality().hash(data));
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$UiStateExceptionImplCopyWith<T, _$UiStateExceptionImpl<T>> get copyWith =>
-      __$$UiStateExceptionImplCopyWithImpl<T, _$UiStateExceptionImpl<T>>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            bool isLoading, SingleObserver<Exception>? exception, T? data)
-        loading,
-    required TResult Function(
-            SingleObserver<Exception> exception, bool isLoading, T? data)
-        exception,
-    required TResult Function(
-            T data, bool isLoading, SingleObserver<Exception>? exception)
-        success,
-  }) {
-    return exception(this.exception, isLoading, data);
+  String toString() {
+    return 'UiState<$T>.exception(exception: $exception, isLoading: $isLoading, data: $data)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            bool isLoading, SingleObserver<Exception>? exception, T? data)?
-        loading,
-    TResult? Function(
-            SingleObserver<Exception> exception, bool isLoading, T? data)?
-        exception,
-    TResult? Function(
-            T data, bool isLoading, SingleObserver<Exception>? exception)?
-        success,
-  }) {
-    return exception?.call(this.exception, isLoading, data);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            bool isLoading, SingleObserver<Exception>? exception, T? data)?
-        loading,
-    TResult Function(
-            SingleObserver<Exception> exception, bool isLoading, T? data)?
-        exception,
-    TResult Function(
-            T data, bool isLoading, SingleObserver<Exception>? exception)?
-        success,
-    required TResult orElse(),
-  }) {
-    if (exception != null) {
-      return exception(this.exception, isLoading, data);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(UiStateLoading<T> value) loading,
-    required TResult Function(UiStateException<T> value) exception,
-    required TResult Function(UiStateSuccess<T> value) success,
-  }) {
-    return exception(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(UiStateLoading<T> value)? loading,
-    TResult? Function(UiStateException<T> value)? exception,
-    TResult? Function(UiStateSuccess<T> value)? success,
-  }) {
-    return exception?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(UiStateLoading<T> value)? loading,
-    TResult Function(UiStateException<T> value)? exception,
-    TResult Function(UiStateSuccess<T> value)? success,
-    required TResult orElse(),
-  }) {
-    if (exception != null) {
-      return exception(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class UiStateException<T> implements UiState<T> {
-  const factory UiStateException(final SingleObserver<Exception> exception,
-      {final bool isLoading, final T? data}) = _$UiStateExceptionImpl<T>;
-
-  @override
-  SingleObserver<Exception> get exception;
-  @override
-  bool get isLoading;
-  @override
-  T? get data;
-  @override
-  @JsonKey(ignore: true)
-  _$$UiStateExceptionImplCopyWith<T, _$UiStateExceptionImpl<T>> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$UiStateSuccessImplCopyWith<T, $Res>
+abstract mixin class $UiStateExceptionCopyWith<T, $Res>
     implements $UiStateCopyWith<T, $Res> {
-  factory _$$UiStateSuccessImplCopyWith(_$UiStateSuccessImpl<T> value,
-          $Res Function(_$UiStateSuccessImpl<T>) then) =
-      __$$UiStateSuccessImplCopyWithImpl<T, $Res>;
+  factory $UiStateExceptionCopyWith(
+          UiStateException<T> value, $Res Function(UiStateException<T>) _then) =
+      _$UiStateExceptionCopyWithImpl;
   @override
   @useResult
-  $Res call({T data, bool isLoading, SingleObserver<Exception>? exception});
+  $Res call({SingleObserver<Exception> exception, bool isLoading, T? data});
 }
 
 /// @nodoc
-class __$$UiStateSuccessImplCopyWithImpl<T, $Res>
-    extends _$UiStateCopyWithImpl<T, $Res, _$UiStateSuccessImpl<T>>
-    implements _$$UiStateSuccessImplCopyWith<T, $Res> {
-  __$$UiStateSuccessImplCopyWithImpl(_$UiStateSuccessImpl<T> _value,
-      $Res Function(_$UiStateSuccessImpl<T>) _then)
-      : super(_value, _then);
+class _$UiStateExceptionCopyWithImpl<T, $Res>
+    implements $UiStateExceptionCopyWith<T, $Res> {
+  _$UiStateExceptionCopyWithImpl(this._self, this._then);
 
-  @pragma('vm:prefer-inline')
+  final UiStateException<T> _self;
+  final $Res Function(UiStateException<T>) _then;
+
+  /// Create a copy of UiState
+  /// with the given fields replaced by the non-null parameter values.
   @override
+  @pragma('vm:prefer-inline')
   $Res call({
-    Object? data = freezed,
+    Object? exception = null,
     Object? isLoading = null,
-    Object? exception = freezed,
+    Object? data = freezed,
   }) {
-    return _then(_$UiStateSuccessImpl<T>(
-      freezed == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as T,
+    return _then(UiStateException<T>(
+      null == exception
+          ? _self.exception
+          : exception // ignore: cast_nullable_to_non_nullable
+              as SingleObserver<Exception>,
       isLoading: null == isLoading
-          ? _value.isLoading
+          ? _self.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
-      exception: freezed == exception
-          ? _value.exception
-          : exception // ignore: cast_nullable_to_non_nullable
-              as SingleObserver<Exception>?,
+      data: freezed == data
+          ? _self.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T?,
     ));
   }
 }
 
 /// @nodoc
 
-class _$UiStateSuccessImpl<T> implements UiStateSuccess<T> {
-  const _$UiStateSuccessImpl(this.data,
+class UiStateSuccess<T> implements UiState<T> {
+  const UiStateSuccess(this.data,
       {this.isLoading = false, this.exception = null});
 
   @override
@@ -562,16 +279,19 @@ class _$UiStateSuccessImpl<T> implements UiStateSuccess<T> {
   @JsonKey()
   final SingleObserver<Exception>? exception;
 
+  /// Create a copy of UiState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'UiState<$T>.success(data: $data, isLoading: $isLoading, exception: $exception)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $UiStateSuccessCopyWith<T, UiStateSuccess<T>> get copyWith =>
+      _$UiStateSuccessCopyWithImpl<T, UiStateSuccess<T>>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$UiStateSuccessImpl<T> &&
+            other is UiStateSuccess<T> &&
             const DeepCollectionEquality().equals(other.data, data) &&
             (identical(other.isLoading, isLoading) ||
                 other.isLoading == isLoading) &&
@@ -583,113 +303,55 @@ class _$UiStateSuccessImpl<T> implements UiStateSuccess<T> {
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(data), isLoading, exception);
 
-  @JsonKey(ignore: true)
+  @override
+  String toString() {
+    return 'UiState<$T>.success(data: $data, isLoading: $isLoading, exception: $exception)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $UiStateSuccessCopyWith<T, $Res>
+    implements $UiStateCopyWith<T, $Res> {
+  factory $UiStateSuccessCopyWith(
+          UiStateSuccess<T> value, $Res Function(UiStateSuccess<T>) _then) =
+      _$UiStateSuccessCopyWithImpl;
+  @override
+  @useResult
+  $Res call({T data, bool isLoading, SingleObserver<Exception>? exception});
+}
+
+/// @nodoc
+class _$UiStateSuccessCopyWithImpl<T, $Res>
+    implements $UiStateSuccessCopyWith<T, $Res> {
+  _$UiStateSuccessCopyWithImpl(this._self, this._then);
+
+  final UiStateSuccess<T> _self;
+  final $Res Function(UiStateSuccess<T>) _then;
+
+  /// Create a copy of UiState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  _$$UiStateSuccessImplCopyWith<T, _$UiStateSuccessImpl<T>> get copyWith =>
-      __$$UiStateSuccessImplCopyWithImpl<T, _$UiStateSuccessImpl<T>>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            bool isLoading, SingleObserver<Exception>? exception, T? data)
-        loading,
-    required TResult Function(
-            SingleObserver<Exception> exception, bool isLoading, T? data)
-        exception,
-    required TResult Function(
-            T data, bool isLoading, SingleObserver<Exception>? exception)
-        success,
+  $Res call({
+    Object? data = freezed,
+    Object? isLoading = null,
+    Object? exception = freezed,
   }) {
-    return success(data, isLoading, this.exception);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            bool isLoading, SingleObserver<Exception>? exception, T? data)?
-        loading,
-    TResult? Function(
-            SingleObserver<Exception> exception, bool isLoading, T? data)?
-        exception,
-    TResult? Function(
-            T data, bool isLoading, SingleObserver<Exception>? exception)?
-        success,
-  }) {
-    return success?.call(data, isLoading, this.exception);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            bool isLoading, SingleObserver<Exception>? exception, T? data)?
-        loading,
-    TResult Function(
-            SingleObserver<Exception> exception, bool isLoading, T? data)?
-        exception,
-    TResult Function(
-            T data, bool isLoading, SingleObserver<Exception>? exception)?
-        success,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(data, isLoading, this.exception);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(UiStateLoading<T> value) loading,
-    required TResult Function(UiStateException<T> value) exception,
-    required TResult Function(UiStateSuccess<T> value) success,
-  }) {
-    return success(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(UiStateLoading<T> value)? loading,
-    TResult? Function(UiStateException<T> value)? exception,
-    TResult? Function(UiStateSuccess<T> value)? success,
-  }) {
-    return success?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(UiStateLoading<T> value)? loading,
-    TResult Function(UiStateException<T> value)? exception,
-    TResult Function(UiStateSuccess<T> value)? success,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(this);
-    }
-    return orElse();
+    return _then(UiStateSuccess<T>(
+      freezed == data
+          ? _self.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+      isLoading: null == isLoading
+          ? _self.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      exception: freezed == exception
+          ? _self.exception
+          : exception // ignore: cast_nullable_to_non_nullable
+              as SingleObserver<Exception>?,
+    ));
   }
 }
 
-abstract class UiStateSuccess<T> implements UiState<T> {
-  const factory UiStateSuccess(final T data,
-      {final bool isLoading,
-      final SingleObserver<Exception>? exception}) = _$UiStateSuccessImpl<T>;
-
-  @override
-  T get data;
-  @override
-  bool get isLoading;
-  @override
-  SingleObserver<Exception>? get exception;
-  @override
-  @JsonKey(ignore: true)
-  _$$UiStateSuccessImplCopyWith<T, _$UiStateSuccessImpl<T>> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

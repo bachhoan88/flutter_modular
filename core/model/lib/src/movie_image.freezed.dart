@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,96 +10,77 @@ part of 'movie_image.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-MovieImage _$MovieImageFromJson(Map<String, dynamic> json) {
-  return _MovieImage.fromJson(json);
-}
 
 /// @nodoc
 mixin _$MovieImage {
-  List<ImageData>? get backdrops => throw _privateConstructorUsedError;
-  List<ImageData>? get posters => throw _privateConstructorUsedError;
+  List<ImageData>? get backdrops;
+  List<ImageData>? get posters;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $MovieImageCopyWith<MovieImage> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $MovieImageCopyWith<$Res> {
-  factory $MovieImageCopyWith(
-          MovieImage value, $Res Function(MovieImage) then) =
-      _$MovieImageCopyWithImpl<$Res, MovieImage>;
-  @useResult
-  $Res call({List<ImageData>? backdrops, List<ImageData>? posters});
-}
-
-/// @nodoc
-class _$MovieImageCopyWithImpl<$Res, $Val extends MovieImage>
-    implements $MovieImageCopyWith<$Res> {
-  _$MovieImageCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of MovieImage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $MovieImageCopyWith<MovieImage> get copyWith =>
+      _$MovieImageCopyWithImpl<MovieImage>(this as MovieImage, _$identity);
+
+  /// Serializes this MovieImage to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? backdrops = freezed,
-    Object? posters = freezed,
-  }) {
-    return _then(_value.copyWith(
-      backdrops: freezed == backdrops
-          ? _value.backdrops
-          : backdrops // ignore: cast_nullable_to_non_nullable
-              as List<ImageData>?,
-      posters: freezed == posters
-          ? _value.posters
-          : posters // ignore: cast_nullable_to_non_nullable
-              as List<ImageData>?,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is MovieImage &&
+            const DeepCollectionEquality().equals(other.backdrops, backdrops) &&
+            const DeepCollectionEquality().equals(other.posters, posters));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(backdrops),
+      const DeepCollectionEquality().hash(posters));
+
+  @override
+  String toString() {
+    return 'MovieImage(backdrops: $backdrops, posters: $posters)';
   }
 }
 
 /// @nodoc
-abstract class _$$MovieImageImplCopyWith<$Res>
-    implements $MovieImageCopyWith<$Res> {
-  factory _$$MovieImageImplCopyWith(
-          _$MovieImageImpl value, $Res Function(_$MovieImageImpl) then) =
-      __$$MovieImageImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $MovieImageCopyWith<$Res> {
+  factory $MovieImageCopyWith(
+          MovieImage value, $Res Function(MovieImage) _then) =
+      _$MovieImageCopyWithImpl;
   @useResult
   $Res call({List<ImageData>? backdrops, List<ImageData>? posters});
 }
 
 /// @nodoc
-class __$$MovieImageImplCopyWithImpl<$Res>
-    extends _$MovieImageCopyWithImpl<$Res, _$MovieImageImpl>
-    implements _$$MovieImageImplCopyWith<$Res> {
-  __$$MovieImageImplCopyWithImpl(
-      _$MovieImageImpl _value, $Res Function(_$MovieImageImpl) _then)
-      : super(_value, _then);
+class _$MovieImageCopyWithImpl<$Res> implements $MovieImageCopyWith<$Res> {
+  _$MovieImageCopyWithImpl(this._self, this._then);
 
+  final MovieImage _self;
+  final $Res Function(MovieImage) _then;
+
+  /// Create a copy of MovieImage
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? backdrops = freezed,
     Object? posters = freezed,
   }) {
-    return _then(_$MovieImageImpl(
+    return _then(_self.copyWith(
       backdrops: freezed == backdrops
-          ? _value._backdrops
+          ? _self.backdrops
           : backdrops // ignore: cast_nullable_to_non_nullable
               as List<ImageData>?,
       posters: freezed == posters
-          ? _value._posters
+          ? _self.posters
           : posters // ignore: cast_nullable_to_non_nullable
               as List<ImageData>?,
     ));
@@ -107,14 +89,14 @@ class __$$MovieImageImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$MovieImageImpl implements _MovieImage {
-  const _$MovieImageImpl(
+class _MovieImage extends MovieImage {
+  const _MovieImage(
       {final List<ImageData>? backdrops, final List<ImageData>? posters})
       : _backdrops = backdrops,
-        _posters = posters;
-
-  factory _$MovieImageImpl.fromJson(Map<String, dynamic> json) =>
-      _$$MovieImageImplFromJson(json);
+        _posters = posters,
+        super._();
+  factory _MovieImage.fromJson(Map<String, dynamic> json) =>
+      _$MovieImageFromJson(json);
 
   final List<ImageData>? _backdrops;
   @override
@@ -136,56 +118,81 @@ class _$MovieImageImpl implements _MovieImage {
     return EqualUnmodifiableListView(value);
   }
 
+  /// Create a copy of MovieImage
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'MovieImage(backdrops: $backdrops, posters: $posters)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$MovieImageCopyWith<_MovieImage> get copyWith =>
+      __$MovieImageCopyWithImpl<_MovieImage>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$MovieImageToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MovieImageImpl &&
+            other is _MovieImage &&
             const DeepCollectionEquality()
                 .equals(other._backdrops, _backdrops) &&
             const DeepCollectionEquality().equals(other._posters, _posters));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_backdrops),
       const DeepCollectionEquality().hash(_posters));
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$MovieImageImplCopyWith<_$MovieImageImpl> get copyWith =>
-      __$$MovieImageImplCopyWithImpl<_$MovieImageImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$MovieImageImplToJson(
-      this,
-    );
+  String toString() {
+    return 'MovieImage(backdrops: $backdrops, posters: $posters)';
   }
 }
 
-abstract class _MovieImage implements MovieImage {
-  const factory _MovieImage(
-      {final List<ImageData>? backdrops,
-      final List<ImageData>? posters}) = _$MovieImageImpl;
-
-  factory _MovieImage.fromJson(Map<String, dynamic> json) =
-      _$MovieImageImpl.fromJson;
-
+/// @nodoc
+abstract mixin class _$MovieImageCopyWith<$Res>
+    implements $MovieImageCopyWith<$Res> {
+  factory _$MovieImageCopyWith(
+          _MovieImage value, $Res Function(_MovieImage) _then) =
+      __$MovieImageCopyWithImpl;
   @override
-  List<ImageData>? get backdrops;
-  @override
-  List<ImageData>? get posters;
-  @override
-  @JsonKey(ignore: true)
-  _$$MovieImageImplCopyWith<_$MovieImageImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @useResult
+  $Res call({List<ImageData>? backdrops, List<ImageData>? posters});
 }
+
+/// @nodoc
+class __$MovieImageCopyWithImpl<$Res> implements _$MovieImageCopyWith<$Res> {
+  __$MovieImageCopyWithImpl(this._self, this._then);
+
+  final _MovieImage _self;
+  final $Res Function(_MovieImage) _then;
+
+  /// Create a copy of MovieImage
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? backdrops = freezed,
+    Object? posters = freezed,
+  }) {
+    return _then(_MovieImage(
+      backdrops: freezed == backdrops
+          ? _self._backdrops
+          : backdrops // ignore: cast_nullable_to_non_nullable
+              as List<ImageData>?,
+      posters: freezed == posters
+          ? _self._posters
+          : posters // ignore: cast_nullable_to_non_nullable
+              as List<ImageData>?,
+    ));
+  }
+}
+
+// dart format on

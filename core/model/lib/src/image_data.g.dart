@@ -6,17 +6,16 @@ part of 'image_data.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ImageDataImpl _$$ImageDataImplFromJson(Map<String, dynamic> json) =>
-    _$ImageDataImpl(
+_ImageData _$ImageDataFromJson(Map<String, dynamic> json) => _ImageData(
       imagePath: json['file_path'] as String?,
-      height: json['height'] as int?,
-      width: json['width'] as int?,
+      height: (json['height'] as num?)?.toInt(),
+      width: (json['width'] as num?)?.toInt(),
       countryCode: json['iso_639_1'] as String?,
       voteAverage: (json['vote_average'] as num?)?.toDouble(),
-      voteCount: json['vote_count'] as int?,
+      voteCount: (json['vote_count'] as num?)?.toInt(),
     );
 
-Map<String, dynamic> _$$ImageDataImplToJson(_$ImageDataImpl instance) =>
+Map<String, dynamic> _$ImageDataToJson(_ImageData instance) =>
     <String, dynamic>{
       'file_path': instance.imagePath,
       'height': instance.height,

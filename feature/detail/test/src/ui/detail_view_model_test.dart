@@ -62,7 +62,7 @@ void main() {
 
       /// Check the state of [DetailViewModel]
       expect(detailViewModel.state, isA<UiStateException>());
-      expect((detailViewModel.state as UiStateException).exception, exception);
+      expect((detailViewModel.state as UiStateException).exception.value, exception);
     });
 
   });

@@ -12,7 +12,8 @@ MovieDbDataError _$MovieDbDataErrorFromJson(Map<String, dynamic> json) =>
       json,
       ($checkedConvert) {
         final val = MovieDbDataError(
-          statusCode: $checkedConvert('status_code', (v) => v as int?),
+          statusCode:
+              $checkedConvert('status_code', (v) => (v as num?)?.toInt()),
           statusMessage: $checkedConvert('status_message', (v) => v as String?),
         );
         return val;

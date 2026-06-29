@@ -12,7 +12,7 @@ abstract class BaseUiState<T> {
 }
 
 @freezed
-sealed class UiState<T> with _$UiState implements BaseUiState<T> {
+sealed class UiState<T> with _$UiState<T> implements BaseUiState<T> {
   const factory UiState.loading(
     bool isLoading, {
     @Default(null) SingleObserver<Exception>? exception,

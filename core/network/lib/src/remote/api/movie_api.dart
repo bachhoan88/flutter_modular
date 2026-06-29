@@ -1,7 +1,7 @@
 import 'package:core_model/models.dart';
 import 'package:core_network/src/remote/response/movie_response.dart';
 import 'package:dio/dio.dart';
-import 'package:retrofit/http.dart';
+import 'package:retrofit/retrofit.dart';
 
 part 'movie_api.g.dart';
 

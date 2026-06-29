@@ -60,7 +60,7 @@ void main() {
       /// Then, check the state of [HomeViewModel]
       expect(homeViewModel.state, isA<UiStateException>());
       final exceptionState = homeViewModel.state as UiStateException;
-      expect(exceptionState.exception, exception);
+      expect(exceptionState.exception.value, exception);
     });
   });
 }
