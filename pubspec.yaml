@@ -5,7 +5,21 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.1+1
 
 environment:
-  sdk: '>=3.5.0 <4.0.0'
+  sdk: '>=3.6.0 <4.0.0'
+
+# Dart pub workspace: all packages resolve together against a single
+# pubspec.lock, so a dependency can never diverge in version across modules.
+workspace:
+  - core/common
+  - core/model
+  - core/network
+  - core/data
+  - core/domain
+  - core/database
+  - core/designsystem
+  - core/ui
+  - feature/home
+  - feature/detail
 
 dependencies:
   flutter:

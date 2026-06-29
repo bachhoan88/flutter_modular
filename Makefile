@@ -8,10 +8,10 @@ pub_get: $(PUBSPEC_LOCK)
 	@cd $(@D) && \
 	flutter pub get
 
-# Runs `flutter pub get` in all the project packages.
+# With Dart pub workspaces, a single resolve at the workspace root covers
+# every package (one shared pubspec.lock).
 pub_get_all:
-	@find . -name pubspec.yaml -exec echo "### Getting packages for {}" \; \
-	-execdir flutter pub get \;
+	@flutter pub get
 
 # Runs `flutter pub run build_runner build` in all the project packages.
 # Covers freezed / json_serializable / retrofit / riverpod. Asset code

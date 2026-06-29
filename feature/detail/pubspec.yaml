@@ -1,8 +1,10 @@
 name: feature_detail
 description: "Feature detail"
 
+resolution: workspace
+
 environment:
-  sdk: '>=3.5.0 <4.0.0'
+  sdk: '>=3.6.0 <4.0.0'
 
 dependencies:
   flutter:

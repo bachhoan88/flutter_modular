@@ -46,6 +46,12 @@ Flutter package named `core_<name>` / `feature_<name>` and exposes a single
 barrel file `lib/<name>.dart` (e.g. `core_network` → `lib/networks.dart`,
 `feature_home` → `lib/homes.dart`).
 
+All packages form a single **Dart pub workspace** (`resolution: workspace`;
+members listed under `workspace:` in the root `pubspec.yaml`). They resolve
+together against one shared `pubspec.lock`, so a dependency can never diverge
+in version across modules. `flutter pub get` at the repo root resolves
+everything.
+
 ```
 app (lib/, main.dart, main_router.dart)
         │
@@ -142,8 +148,10 @@ name: core_foo            # or feature_bar
 publish_to: none
 version: 1.0.0+1
 
+resolution: workspace     # join the pub workspace (shared lock / versions)
+
 environment:
-  sdk: '>=3.5.0 <4.0.0'
+  sdk: '>=3.6.0 <4.0.0'
 
 dependencies:
   flutter:
@@ -178,10 +186,17 @@ Export the module's public API from a single file `lib/<name>.dart`:
 export 'src/...';
 ```
 
-### 4. Register the module as a path dependency
+### 4. Register the module (workspace + path dependency)
 
-Add it to every consumer's `pubspec.yaml` (and to the root `pubspec.yaml`
-for a feature module):
+Add the module path to the `workspace:` list in the **root** `pubspec.yaml`:
+
+```yaml
+workspace:
+  - core/foo            # or feature/bar
+```
+
+Then add it as a path dependency to every consumer's `pubspec.yaml` (and to
+the root `pubspec.yaml` for a feature module):
 
 ```yaml
 dependencies:
