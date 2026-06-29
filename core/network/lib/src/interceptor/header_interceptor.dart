@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:core_network/src/storage/token_storage.dart';
 import 'package:dio/dio.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
@@ -8,14 +9,23 @@ class HeaderInterceptor extends InterceptorsWrapper {
   final String authHeaderKey = 'Authorization';
   final String bearer = 'Bearer';
 
+  final TokenStorage _tokenStorage;
+
+  HeaderInterceptor({TokenStorage tokenStorage = const TokenStorage()})
+      : _tokenStorage = tokenStorage;
+
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) async {
     final userAgentValue = await userAgentClientHintsHeader();
 
-    /// If need to add token on header, please add get and add here
-    /// If the first time, token is empty or not valid, please call to request token before add header
-
     options.headers[userAgentKey] = userAgentValue;
+
+    // Attach the stored access token when present. Unauthenticated/demo
+    // requests (no stored token) are sent without an Authorization header.
+    final accessToken = await _tokenStorage.getAccessToken();
+    if (accessToken != null && accessToken.isNotEmpty) {
+      options.headers[authHeaderKey] = '$bearer $accessToken';
+    }
 
     handler.next(options);
   }

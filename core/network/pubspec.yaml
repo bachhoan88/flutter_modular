@@ -17,6 +17,7 @@ dependencies:
   dio: ^5.4.0
   retrofit: ^4.0.3
   package_info_plus: ^8.0.0
+  flutter_secure_storage: ^9.2.2
   retrofit_generator: ^9.1.9
   equatable: ^2.0.5
   core_common:
