@@ -5,3 +5,4 @@ export 'src/remote/response/movie_response.dart';
 export 'src/di/network_provider.dart';
 export 'src/model/network_app_error.dart';
 export 'src/cert/app_cert.dart';
+export 'src/storage/token_storage.dart';

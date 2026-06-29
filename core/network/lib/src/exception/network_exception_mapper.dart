@@ -4,6 +4,7 @@ import 'package:core_network/src/model/network_app_error.dart';
 
 abstract class NetworkExceptionMapper {
   Future<BaseException> mapperTo(NetworkAppError error) async {
+    logger.e('API error [${error.errorType}]: ${error.message}', error: error.errors);
     switch (error.errorType) {
       case AppErrorType.network:
         return const ToastException(-1, messageId: 'ok');

@@ -6,8 +6,7 @@ part of 'movie_image.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$MovieImageImpl _$$MovieImageImplFromJson(Map<String, dynamic> json) =>
-    _$MovieImageImpl(
+_MovieImage _$MovieImageFromJson(Map<String, dynamic> json) => _MovieImage(
       backdrops: (json['backdrops'] as List<dynamic>?)
           ?.map((e) => ImageData.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -16,7 +15,7 @@ _$MovieImageImpl _$$MovieImageImplFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$MovieImageImplToJson(_$MovieImageImpl instance) =>
+Map<String, dynamic> _$MovieImageToJson(_MovieImage instance) =>
     <String, dynamic>{
       'backdrops': instance.backdrops,
       'posters': instance.posters,

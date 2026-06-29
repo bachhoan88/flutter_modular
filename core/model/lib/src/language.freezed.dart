@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,81 +9,52 @@ part of 'language.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-Language _$LanguageFromJson(Map<String, dynamic> json) {
-  return _Language.fromJson(json);
-}
 
 /// @nodoc
 mixin _$Language {
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @JsonKey(name: 'english_name')
-  String? get engName => throw _privateConstructorUsedError;
+  String? get engName;
   @JsonKey(name: 'iso_639_1')
-  String? get countryCode => throw _privateConstructorUsedError;
+  String? get countryCode;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $LanguageCopyWith<Language> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $LanguageCopyWith<$Res> {
-  factory $LanguageCopyWith(Language value, $Res Function(Language) then) =
-      _$LanguageCopyWithImpl<$Res, Language>;
-  @useResult
-  $Res call(
-      {String? name,
-      @JsonKey(name: 'english_name') String? engName,
-      @JsonKey(name: 'iso_639_1') String? countryCode});
-}
-
-/// @nodoc
-class _$LanguageCopyWithImpl<$Res, $Val extends Language>
-    implements $LanguageCopyWith<$Res> {
-  _$LanguageCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of Language
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $LanguageCopyWith<Language> get copyWith =>
+      _$LanguageCopyWithImpl<Language>(this as Language, _$identity);
+
+  /// Serializes this Language to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? name = freezed,
-    Object? engName = freezed,
-    Object? countryCode = freezed,
-  }) {
-    return _then(_value.copyWith(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      engName: freezed == engName
-          ? _value.engName
-          : engName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      countryCode: freezed == countryCode
-          ? _value.countryCode
-          : countryCode // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Language &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.engName, engName) || other.engName == engName) &&
+            (identical(other.countryCode, countryCode) ||
+                other.countryCode == countryCode));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, engName, countryCode);
+
+  @override
+  String toString() {
+    return 'Language(name: $name, engName: $engName, countryCode: $countryCode)';
   }
 }
 
 /// @nodoc
-abstract class _$$LanguageImplCopyWith<$Res>
-    implements $LanguageCopyWith<$Res> {
-  factory _$$LanguageImplCopyWith(
-          _$LanguageImpl value, $Res Function(_$LanguageImpl) then) =
-      __$$LanguageImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $LanguageCopyWith<$Res> {
+  factory $LanguageCopyWith(Language value, $Res Function(Language) _then) =
+      _$LanguageCopyWithImpl;
   @useResult
   $Res call(
       {String? name,
@@ -92,13 +63,14 @@ abstract class _$$LanguageImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$LanguageImplCopyWithImpl<$Res>
-    extends _$LanguageCopyWithImpl<$Res, _$LanguageImpl>
-    implements _$$LanguageImplCopyWith<$Res> {
-  __$$LanguageImplCopyWithImpl(
-      _$LanguageImpl _value, $Res Function(_$LanguageImpl) _then)
-      : super(_value, _then);
+class _$LanguageCopyWithImpl<$Res> implements $LanguageCopyWith<$Res> {
+  _$LanguageCopyWithImpl(this._self, this._then);
 
+  final Language _self;
+  final $Res Function(Language) _then;
+
+  /// Create a copy of Language
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -106,33 +78,202 @@ class __$$LanguageImplCopyWithImpl<$Res>
     Object? engName = freezed,
     Object? countryCode = freezed,
   }) {
-    return _then(_$LanguageImpl(
+    return _then(_self.copyWith(
       name: freezed == name
-          ? _value.name
+          ? _self.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
       engName: freezed == engName
-          ? _value.engName
+          ? _self.engName
           : engName // ignore: cast_nullable_to_non_nullable
               as String?,
       countryCode: freezed == countryCode
-          ? _value.countryCode
+          ? _self.countryCode
           : countryCode // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [Language].
+extension LanguagePatterns on Language {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_Language value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Language() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_Language value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Language():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_Language value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Language() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            String? name,
+            @JsonKey(name: 'english_name') String? engName,
+            @JsonKey(name: 'iso_639_1') String? countryCode)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Language() when $default != null:
+        return $default(_that.name, _that.engName, _that.countryCode);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            String? name,
+            @JsonKey(name: 'english_name') String? engName,
+            @JsonKey(name: 'iso_639_1') String? countryCode)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Language():
+        return $default(_that.name, _that.engName, _that.countryCode);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            String? name,
+            @JsonKey(name: 'english_name') String? engName,
+            @JsonKey(name: 'iso_639_1') String? countryCode)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Language() when $default != null:
+        return $default(_that.name, _that.engName, _that.countryCode);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
-class _$LanguageImpl implements _Language {
-  const _$LanguageImpl(
+class _Language extends Language {
+  const _Language(
       {this.name,
       @JsonKey(name: 'english_name') this.engName,
-      @JsonKey(name: 'iso_639_1') this.countryCode});
-
-  factory _$LanguageImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LanguageImplFromJson(json);
+      @JsonKey(name: 'iso_639_1') this.countryCode})
+      : super._();
+  factory _Language.fromJson(Map<String, dynamic> json) =>
+      _$LanguageFromJson(json);
 
   @override
   final String? name;
@@ -143,59 +284,86 @@ class _$LanguageImpl implements _Language {
   @JsonKey(name: 'iso_639_1')
   final String? countryCode;
 
+  /// Create a copy of Language
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'Language(name: $name, engName: $engName, countryCode: $countryCode)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$LanguageCopyWith<_Language> get copyWith =>
+      __$LanguageCopyWithImpl<_Language>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$LanguageToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LanguageImpl &&
+            other is _Language &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.engName, engName) || other.engName == engName) &&
             (identical(other.countryCode, countryCode) ||
                 other.countryCode == countryCode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, engName, countryCode);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$LanguageImplCopyWith<_$LanguageImpl> get copyWith =>
-      __$$LanguageImplCopyWithImpl<_$LanguageImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$LanguageImplToJson(
-      this,
-    );
+  String toString() {
+    return 'Language(name: $name, engName: $engName, countryCode: $countryCode)';
   }
 }
 
-abstract class _Language implements Language {
-  const factory _Language(
-      {final String? name,
-      @JsonKey(name: 'english_name') final String? engName,
-      @JsonKey(name: 'iso_639_1') final String? countryCode}) = _$LanguageImpl;
-
-  factory _Language.fromJson(Map<String, dynamic> json) =
-      _$LanguageImpl.fromJson;
-
+/// @nodoc
+abstract mixin class _$LanguageCopyWith<$Res>
+    implements $LanguageCopyWith<$Res> {
+  factory _$LanguageCopyWith(_Language value, $Res Function(_Language) _then) =
+      __$LanguageCopyWithImpl;
   @override
-  String? get name;
-  @override
-  @JsonKey(name: 'english_name')
-  String? get engName;
-  @override
-  @JsonKey(name: 'iso_639_1')
-  String? get countryCode;
-  @override
-  @JsonKey(ignore: true)
-  _$$LanguageImplCopyWith<_$LanguageImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @useResult
+  $Res call(
+      {String? name,
+      @JsonKey(name: 'english_name') String? engName,
+      @JsonKey(name: 'iso_639_1') String? countryCode});
 }
+
+/// @nodoc
+class __$LanguageCopyWithImpl<$Res> implements _$LanguageCopyWith<$Res> {
+  __$LanguageCopyWithImpl(this._self, this._then);
+
+  final _Language _self;
+  final $Res Function(_Language) _then;
+
+  /// Create a copy of Language
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? name = freezed,
+    Object? engName = freezed,
+    Object? countryCode = freezed,
+  }) {
+    return _then(_Language(
+      name: freezed == name
+          ? _self.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      engName: freezed == engName
+          ? _self.engName
+          : engName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      countryCode: freezed == countryCode
+          ? _self.countryCode
+          : countryCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+// dart format on

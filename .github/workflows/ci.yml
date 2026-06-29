@@ -6,34 +6,51 @@ on:
   pull_request:
     branches: [ "main" ]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
+
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.16.5'
+          flutter-version: '3.44.4'
           channel: 'stable'
+          cache: true
 
       - name: 'Check flutter version'
         run: flutter --version
 
-      # Run pub get all modules
+      # Install dependencies for every module (root + core + feature)
       - name: 'Install dependencies'
         run: make pub_get_all
 
-      # Check coding convention
+      # Regenerate freezed / json_serializable / retrofit / riverpod sources.
+      # FlutterGen asset code is generated separately (make gen_assets) and is
+      # not part of build_runner here, which keeps this step reliable.
+      - name: 'Generate sources'
+        run: make generate_sources_all
+
+      # Formatting is advisory until the whole codebase is formatted; remove
+      # continue-on-error to make it a hard gate afterwards.
+      - name: 'Check formatting'
+        continue-on-error: true
+        run: dart format --output=none --set-exit-if-changed .
+
+      # Static analysis gate (lints) across all modules
       - name: 'Analyze project source'
         run: make analyze_all
 
-      # Install lcov
       - name: 'Install Lcov'
         run: |
           sudo apt-get update
-          sudo apt-get install lcov
+          sudo apt-get install -y lcov
 
-      # Run unit test
+      # Unit tests with coverage
       - name: 'Run unit test'
         run: make test_all

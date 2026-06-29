@@ -6,20 +6,19 @@ part of 'movie_info.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$MovieInfoImpl _$$MovieInfoImplFromJson(Map<String, dynamic> json) =>
-    _$MovieInfoImpl(
+_MovieInfo _$MovieInfoFromJson(Map<String, dynamic> json) => _MovieInfo(
       adult: json['adult'] as bool?,
       backdropPath: json['backdrop_path'] as String?,
       collection: json['belongs_to_collection'] == null
           ? null
           : Collection.fromJson(
               json['belongs_to_collection'] as Map<String, dynamic>),
-      budget: json['budget'] as int?,
+      budget: (json['budget'] as num?)?.toInt(),
       genres: (json['genres'] as List<dynamic>?)
           ?.map((e) => Genre.fromJson(e as Map<String, dynamic>))
           .toList(),
       homepage: json['homepage'] as String?,
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       imdbId: json['imdb_id'] as String?,
       originalLanguage: json['original_language'] as String?,
       originalTitle: json['original_title'] as String?,
@@ -27,14 +26,14 @@ _$MovieInfoImpl _$$MovieInfoImplFromJson(Map<String, dynamic> json) =>
       popularity: (json['popularity'] as num?)?.toDouble(),
       posterPath: json['poster_path'] as String?,
       releaseDate: json['release_date'] as String?,
-      revenue: json['revenue'] as int?,
-      runtime: json['runtime'] as int?,
+      revenue: (json['revenue'] as num?)?.toInt(),
+      runtime: (json['runtime'] as num?)?.toInt(),
       status: json['status'] as String?,
       tagline: json['tagline'] as String?,
       title: json['title'] as String?,
       video: json['video'] as bool?,
       voteAverage: (json['vote_average'] as num?)?.toDouble(),
-      voteCount: json['vote_count'] as int?,
+      voteCount: (json['vote_count'] as num?)?.toInt(),
       companies: (json['production_companies'] as List<dynamic>?)
           ?.map((e) => Company.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -46,7 +45,7 @@ _$MovieInfoImpl _$$MovieInfoImplFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$MovieInfoImplToJson(_$MovieInfoImpl instance) =>
+Map<String, dynamic> _$MovieInfoToJson(_MovieInfo instance) =>
     <String, dynamic>{
       'adult': instance.adult,
       'backdrop_path': instance.backdropPath,

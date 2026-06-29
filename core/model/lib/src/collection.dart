@@ -5,7 +5,9 @@ part 'collection.freezed.dart';
 part 'collection.g.dart';
 
 @freezed
-class Collection with _$Collection, BaseModel {
+abstract class Collection with _$Collection, BaseModel {
+  const Collection._();
+
   const factory Collection({
     int? id,
     String? name,

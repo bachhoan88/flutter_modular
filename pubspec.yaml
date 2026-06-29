@@ -5,13 +5,27 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.1+1
 
 environment:
-  sdk: '>=3.2.3 <4.0.0'
+  sdk: '>=3.6.0 <4.0.0'
+
+# Dart pub workspace: all packages resolve together against a single
+# pubspec.lock, so a dependency can never diverge in version across modules.
+workspace:
+  - core/common
+  - core/model
+  - core/network
+  - core/data
+  - core/domain
+  - core/database
+  - core/designsystem
+  - core/ui
+  - feature/home
+  - feature/detail
 
 dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.6
-  hooks_riverpod: ^2.1.3
+  hooks_riverpod: ^2.6.1
   go_router: ^14.1.4
   core_ui:
     path: core/ui
@@ -28,12 +42,10 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
+  flutter_lints: ^5.0.0
 flutter:
   uses-material-design: true
   assets:
-    - assets/images/ic_netflix.png
-    - assets/images/ic_menu.png
     - assets/translations/
   fonts:
     - family: Muli

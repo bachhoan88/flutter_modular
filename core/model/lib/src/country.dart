@@ -6,7 +6,9 @@ part 'country.g.dart';
 part 'country.freezed.dart';
 
 @freezed
-class Country with _$Country, BaseModel {
+abstract class Country with _$Country, BaseModel {
+  const Country._();
+
   const factory Country({
     String? name,
     @JsonKey(name: 'iso_3166_1')

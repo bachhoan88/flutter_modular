@@ -1,7 +1,7 @@
 import 'package:core_model/models.dart';
 import 'package:core_ui/uis.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:feature_detail/src/di/view_model_provider.dart';
+import 'package:feature_detail/src/ui/detail_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -97,7 +97,7 @@ class MovieInfoView extends StatelessWidget {
     return Consumer(builder: (context, ref, child) {
       final movieId = movieInfo.id ?? 0;
       final expanded =
-          ref.watch(detailViewModelProvider(movieId).select((value) => value.data?.isDesExpanded)) ?? false;
+          ref.watch(detailViewModelProvider(movieId).select((value) => value.valueOrNull?.isDesExpanded)) ?? false;
 
       return InkWell(
         onTap: ref.watch(detailViewModelProvider(movieId).notifier).toggleExpand,

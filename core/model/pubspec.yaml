@@ -4,23 +4,24 @@ description: "Core model module"
 version: 1.0.0+1
 publish_to: none
 
+resolution: workspace
+
 environment:
-  sdk: '>=3.2.3 <4.0.0'
+  sdk: '>=3.6.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.2
-  freezed_annotation: ^2.4.1
+  cupertino_icons: ^1.0.6
+  freezed_annotation: ^3.0.0
   json_annotation: ^4.8.1
-  flutter_gen_runner: ^5.4.0
   equatable: ^2.0.5
 
 dev_dependencies:
-  flutter_lints: ^4.0.0
+  flutter_lints: ^5.0.0
   build_runner: ^2.4.8
-  freezed: ^2.4.6
+  freezed: '>=3.1.0 <3.2.0'
   json_serializable: ^6.7.1
 
 flutter:

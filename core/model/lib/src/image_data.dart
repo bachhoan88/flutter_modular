@@ -5,7 +5,9 @@ part 'image_data.g.dart';
 part 'image_data.freezed.dart';
 
 @freezed
-class ImageData with _$ImageData, BaseModel {
+abstract class ImageData with _$ImageData, BaseModel {
+  const ImageData._();
+
   const factory ImageData({
     @JsonKey(name: 'file_path')
     String? imagePath,
