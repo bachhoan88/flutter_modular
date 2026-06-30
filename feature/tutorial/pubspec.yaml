@@ -1,0 +1,28 @@
+name: feature_tutorial
+description: "First-run tutorial / onboarding feature"
+
+version: 1.0.0+1
+publish_to: none
+
+resolution: workspace
+
+environment:
+  sdk: '>=3.6.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  go_router: ^14.1.4
+  hooks_riverpod: ^2.6.1
+  riverpod_annotation: ^2.6.1
+  shared_preferences: ^2.5.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  build_runner: ^2.4.8
+  riverpod_generator: ^2.6.1
+
+flutter:
+  uses-material-design: true

@@ -20,6 +20,7 @@ workspace:
   - core/ui
   - feature/home
   - feature/detail
+  - feature/tutorial
 
 dependencies:
   flutter:
@@ -33,6 +34,8 @@ dependencies:
     path: feature/home
   feature_detail:
     path: feature/detail
+  feature_tutorial:
+    path: feature/tutorial
   core_designsystem:
     path: core/designsystem
   core_network:
